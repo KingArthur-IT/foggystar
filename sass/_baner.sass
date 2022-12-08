@@ -61,7 +61,7 @@
     &__hero
         width: 573px
         height: 573px
-        transition: transform 2s ease-out
+        transition: transform 3s cubic-bezier(.35,.79,.41,.98)
         transform: rotate(0deg)
     &__pointer
         position: absolute
@@ -69,11 +69,12 @@
         left: 50%
         transform: translate(-50%, 0)
         width: 105px
-    &__btn
+    &__btn-wrap
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+    &__btn
         background: url('../img/spinner/button.png') no-repeat
         background-size: 100% 100%
         width: 185px
@@ -91,7 +92,7 @@
         letter-spacing: 0.04em
         text-transform: uppercase
         color: #FFFFFF
-        transition: all .2s
+        transition: width .9s, height .9s
     &::before
         content: ''
         position: absolute
@@ -115,3 +116,11 @@
 .spinner__btn.spinned
     width: 220px
     height: 220px
+    // transition: none
+    animation: .6s ease-in-out .9s infinite alternate pulsing
+
+@keyframes pulsing
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(0.9)

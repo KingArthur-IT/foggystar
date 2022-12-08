@@ -166,10 +166,10 @@ body {
 .spinner__hero {
   width: 573px;
   height: 573px;
-  -webkit-transition: -webkit-transform 2s ease-out;
-  transition: -webkit-transform 2s ease-out;
-  transition: transform 2s ease-out;
-  transition: transform 2s ease-out, -webkit-transform 2s ease-out;
+  -webkit-transition: -webkit-transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
+  transition: -webkit-transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
+  transition: transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
+  transition: transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98), -webkit-transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -183,12 +183,15 @@ body {
   width: 105px;
 }
 
-.spinner__btn {
+.spinner__btn-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.spinner__btn {
   background: url("../img/spinner/button.png") no-repeat;
   background-size: 100% 100%;
   width: 185px;
@@ -212,8 +215,8 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #FFFFFF;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: width .9s, height .9s;
+  transition: width .9s, height .9s;
 }
 
 .spinner::before {
@@ -244,6 +247,30 @@ body {
 .spinner__btn.spinned {
   width: 220px;
   height: 220px;
+  -webkit-animation: .6s ease-in-out .9s infinite alternate pulsing;
+          animation: .6s ease-in-out .9s infinite alternate pulsing;
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
 }
 
 .features {

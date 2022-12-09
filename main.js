@@ -161,11 +161,11 @@ function sendData(email, password, currency, promocode = ""){
     } else { // если всё прошло гладко, выводим результат
         alert(`Готово, получили ${xhr.response.length} байт`); // response -- это ответ сервера
     }
-    console.log(xhr.responseText)
+        console.log(xhr.responseText)
     };
 
     xhr.onerror = function() {
-    alert("Запрос не удался");
+        alert("Запрос не удался");
     };
 }
 

@@ -1,3 +1,4 @@
+//SPINNER and MODAL
 const spinner = document.querySelector('#spinner');
 const spinnerBtn = document.querySelector('.spinner__btn');
 const animTimeout = 2000;
@@ -41,4 +42,22 @@ spinnerBtn.addEventListener('click', () => {
 document.querySelector('.modal__close')?.addEventListener('click', () => closeModal());
 modal.addEventListener('click', () => closeModal());
 
-document.querySelector('.modal__hero').addEventListener('click', e => e.stopPropagation())
+document.querySelector('.modal__hero').addEventListener('click', e => e.stopPropagation());
+
+
+//SELECT
+const select = document.querySelector('.select');
+const selectItems = select.querySelectorAll('.select__item');
+const selectVal = select.querySelector('.select__val');
+
+select.addEventListener('click', () => {
+    select.querySelector('.select__list').classList.toggle('opened');
+});
+
+selectItems.forEach(item => {
+    item.addEventListener('click', () => {
+        selectVal.innerHTML = item.innerHTML;
+        if (!selectVal.classList.contains('selected'))
+            selectVal.classList.add('selected');
+    })
+});

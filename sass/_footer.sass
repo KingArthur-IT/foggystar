@@ -33,3 +33,60 @@
     max-height: 40px
 .scrill
     max-height: 25px
+
+@media screen and (max-width: 1200px)
+    .footer
+        &__list
+            width: 80%
+            justify-content: center
+            margin: 0 auto
+        &__item
+            margin-bottom: 16px
+
+@media screen and (max-width: 860px)
+    .footer
+        &__list
+            width: calc(100% + 48px)
+
+@media screen and (max-width: 768px)
+    .footer
+        &__item
+            max-height: 32px
+            padding: 0 12px
+        .btc
+            max-height: 20px
+        .ethr
+            max-height: 24px
+        .mifinity
+            max-height: 30px
+        .scrill
+            max-height: 25px
+
+@media screen and (max-width: 500px)
+    .footer
+        &__item
+            max-height: 32px
+        .btc
+            max-height: 15px
+        .ethr
+            max-height: 24px
+        .mifinity
+            max-height: 30px
+        .scrill
+            max-height: 20px
+
+@media screen and (max-width: 425px)
+    .footer
+        margin-top: 50px
+        padding: 20px 0
+        &__item
+            max-height: 26px
+            padding: 0 7px
+        .btc
+            max-height: 11px
+        .ethr
+            max-height: 18px
+        .mifinity
+            max-height: 22px
+        .scrill
+            max-height: 14px

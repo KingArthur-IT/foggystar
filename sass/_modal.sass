@@ -186,3 +186,49 @@
             transform: translateY(0px)
             opacity: 1
             pointer-events: all
+
+@media screen and (max-width: 680px)
+    .modal
+        &__hero
+            padding: 50px 40px 40px
+        &__title
+            font-size: 36px
+
+@media screen and (max-width: 600px)
+    .modal
+        padding: 30px 0
+
+@media screen and (max-width: 475px)
+    .modal
+        padding: 0
+        &__container
+            padding: 0
+        &__hero
+            border-radius: 0
+        &__title
+            font-size: 32px
+
+@media screen and (max-width: 425px)
+    .modal
+        &__title
+            font-size: 26px
+        &__description
+            font-size: 14px
+            margin-bottom: 20px
+        &__inputs
+            margin-bottom: 20px
+        &__checkbox-wrap
+            margin-bottom: 8px
+            & label
+                padding-left: 28px
+                font-size: 12px
+                &::before
+                    top: 45%
+                    left: 0
+                    width: 16px
+                    height: 16px
+                    transform: translateY(-50%)
+        &__btn
+            margin-bottom: 30px
+    .input
+        font-size: 14px

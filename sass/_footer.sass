@@ -47,9 +47,13 @@
     .footer
         &__list
             width: calc(100% + 48px)
+            transform: translateX(-24px)
 
 @media screen and (max-width: 768px)
     .footer
+        &__list
+            width: calc(100% + 24px)
+            transform: translateX(-12px)
         &__item
             max-height: 32px
             padding: 0 12px
@@ -79,6 +83,9 @@
     .footer
         margin-top: 50px
         padding: 20px 0
+        &__list
+            width: calc(100% + 14px)
+            transform: translateX(-7px)
         &__item
             max-height: 26px
             padding: 0 7px

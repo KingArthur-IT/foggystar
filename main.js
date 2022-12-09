@@ -32,7 +32,7 @@ spinnerBtn.addEventListener('click', () => {
         setTimeout(() => { //change btn & add sparks
             spinner.classList.add('spinned');
             spinnerBtn.classList.add('spinned');
-            spinnerBtn.innerHTML = 'get bonus';
+            spinnerBtn.innerHTML = 'get <br> bonus';
         }, animTimeout);
     }
     else openModal();

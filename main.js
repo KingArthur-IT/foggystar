@@ -100,8 +100,18 @@ modalBtn.addEventListener('click', e => {
     if (!gamesCheckbox.checked) gamesCheckbox.classList.add('error');
     if (!adultCheckbox.checked) adultCheckbox.classList.add('error');
 
+    if (isEmailValid && isPasswordValid && isCurrencyValid &&
+        termCheckbox.checked && gamesCheckbox.checked && adultCheckbox.checked)
+        sendData(
+            emailInput.value, 
+            passwordInput.value, 
+            currencyInput.querySelector('.select__val').innerHTML, 
+            promocodeInput.value
+        );
 });
 
+
+//oncahge
 termCheckbox.addEventListener('change', e => e.target.classList.remove('error'))
 gamesCheckbox.addEventListener('change', e => e.target.classList.remove('error'))
 adultCheckbox.addEventListener('change', e => e.target.classList.remove('error'))
@@ -113,6 +123,7 @@ passwordInput.addEventListener('input', (e) => {
     if (e.target.value.length > 0) e.target.classList.remove('error');
 });
 
+//functions
 function sendData(email, password, currency, promocode = ""){
     var xhr = new XMLHttpRequest();
 

@@ -802,6 +802,15 @@ body {
   cursor: pointer;
 }
 
+.modal__close path {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.modal__close:hover path {
+  stroke: #FE333C;
+}
+
 .modal__description {
   font-family: 'Inter';
   font-weight: 400;
@@ -866,6 +875,12 @@ body {
 .modal__checkbox-wrap label a {
   color: #FE333C;
   font-weight: 500;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.modal__checkbox-wrap label a:hover {
+  color: #fff;
 }
 
 .modal__checkbox-wrap input[type="checkbox"]:checked ~ label::before {
@@ -914,6 +929,12 @@ body {
 .modal__has-account a {
   font-weight: 700;
   color: #FE333C;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.modal__has-account a:hover {
+  color: #fff;
 }
 
 .input {

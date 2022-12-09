@@ -59,6 +59,10 @@
         width: 16px
         height: 16px
         cursor: pointer
+        & path
+            transition: all .2s ease
+        &:hover path
+            stroke: #FE333C
     &__description
         font-family: 'Inter'
         font-weight: 400
@@ -102,6 +106,9 @@
             & a
                 color: #FE333C
                 font-weight: 500
+                transition: color .3s ease
+                &:hover
+                    color: #fff
         & input[type="checkbox"]:checked ~ label::before
             content: '✓'
             padding-left: 4px
@@ -135,6 +142,9 @@
         & a
             font-weight: 700
             color: #FE333C
+            transition: color .3s ease
+            &:hover
+                color: #fff
 
 .input
     width: 100%

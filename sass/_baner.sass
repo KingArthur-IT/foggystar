@@ -2,7 +2,6 @@
     background: url('../img/baner-bg.jpg') no-repeat
     background-position-x: center
     background-size: cover
-    // min-height: 100vh
     padding-bottom: 60px
     overflow: hidden
     &__logo
@@ -106,6 +105,7 @@
         background-size: 100% 100%
         opacity: 0
         transition: opacity .6s ease
+        pointer-events: none
 
 #spinner.spinning .spinner__hero
     transform: rotate(660deg)
@@ -124,3 +124,123 @@
         transform: scale(1)
     100%
         transform: scale(0.9)
+
+
+@media screen and (max-width: 1240px)
+    .baner
+        &__tree
+            transform: translate(-90%, 30px)
+        &__santa
+            width: 500px
+
+@media screen and (max-width: 1024px)
+    .baner
+        padding-bottom: 400px
+        &__santa
+            transform: translateX(110%)
+        &__tree
+            width: 1000px
+            transform: translate(-85%, 30px)
+
+@media screen and (max-width: 860px)
+    .baner
+        &__tree
+            width: 1075px
+            transform: translate(-79%, 30px)
+        &__title
+            font-size: 32px
+        &__logo 
+            padding: 36px 0 28px
+            & img
+                width: 100px
+    .spinner
+        margin: 40px auto 0px
+        &__btn
+            font-size: 32px
+
+@media screen and (max-width: 768px)
+    .spinner
+        width: 75vw
+        height: 75vw
+        &__hero
+            width: 66vw
+            height: 66vw
+        &__btn
+            width: 24vw
+            height: 24vw
+        &__pointer
+            width: 13vw
+    .baner
+        padding-bottom: 300px
+        &__santa
+            transform: translate(95%, 20%)
+        &__tree
+            width: 120vw
+
+@media screen and (max-width: 700px)
+    .baner
+        &__tree
+            width: 125vw
+
+@media screen and (max-width: 600px)
+    .spinner
+        width: 85vw
+        height: 85vw
+        &__hero
+            width: 74vw
+            height: 74vw
+        &__pointer
+            width: 14vw
+        &__btn
+            font-size: 28px
+    .baner
+        padding-bottom: 200px
+        &__santa
+            width: 400px
+            transform: translate(92%, 28%)
+        &__title
+            font-size: 28px
+        &__logo img
+            width: 80px
+
+@media screen and (max-width: 550px)
+    .baner
+        &__tree
+            width: 130vw
+
+@media screen and (max-width: 500px)
+    .baner
+        &__santa
+            width: 350px
+            transform: translate(95%, 20%)
+        &__tree
+            width: 135vw
+
+@media screen and (max-width: 425px)
+    .baner
+        &__santa
+            width: 300px
+            transform: translate(95%, 13%)
+        &__tree
+            width: 145vw
+            transform: translate(-76%, 30px)
+        &__title
+            font-size: 20px
+        &__logo 
+            padding: 20px 0 26px
+            & img
+                width: 60px
+        &::after
+            height: 195px
+    .spinner
+        &__pointer
+            top: -10px
+        &__btn
+            font-size: 20px
+
+@media screen and (max-width: 375px)
+    .baner
+        padding-bottom: 160px
+        &__santa
+            width: 250px
+            transform: translate(95%, 13%)

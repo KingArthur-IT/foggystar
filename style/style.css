@@ -176,10 +176,10 @@ body {
 .spinner__hero {
   width: 573px;
   height: 573px;
-  -webkit-transition: -webkit-transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
-  transition: -webkit-transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
-  transition: transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
-  transition: transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98), -webkit-transform 3s cubic-bezier(0.35, 0.79, 0.41, 0.98);
+  -webkit-transition: -webkit-transform 4s ease-in-out 0s;
+  transition: -webkit-transform 4s ease-in-out 0s;
+  transition: transform 4s ease-in-out 0s;
+  transition: transform 4s ease-in-out 0s, -webkit-transform 4s ease-in-out 0s;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -247,8 +247,8 @@ body {
 }
 
 #spinner.spinning .spinner__hero {
-  -webkit-transform: rotate(660deg);
-          transform: rotate(660deg);
+  -webkit-transform: rotate(2820deg);
+          transform: rotate(2820deg);
 }
 
 #spinner.spinned:before {

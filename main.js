@@ -28,14 +28,8 @@ const closeModal = () => {
 spinnerBtn.addEventListener('click', () => {
     const isSpinned = spinnerBtn.classList.contains('spinned');
 
-    if (!isSpinned){
+    if (!isSpinned)
         spinner.classList.add('spinning'); //spinning
-        setTimeout(() => { //change btn & add sparks
-            spinner.classList.add('spinned');
-            spinnerBtn.classList.add('spinned');
-            spinnerBtn.innerHTML = 'get <br> bonus';
-        }, animTimeout);
-    }
     else openModal();
 });
 

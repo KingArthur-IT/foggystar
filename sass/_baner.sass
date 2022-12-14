@@ -4,23 +4,35 @@
     background-size: cover
     padding-bottom: 60px
     overflow: hidden
-    &__logo
-        padding: 50px 0 38px
-        margin: 0 auto
+    min-height: 100vh
+    &__hero
         display: flex
-        justify-content: center
+        justify-content: space-between
         align-items: center
-        & img
-            width: 120px
+    &__content
+    &__text
+        font-weight: 500
+        font-size: 20px
+        line-height: 120%
+        letter-spacing: 0.01em
+        color: rgba(255, 255, 255, 0.9)
+        margin-bottom: 20px
     &__title
         font-weight: 800
-        font-size: 40px
-        text-align: center
-        letter-spacing: 0.01em
+        font-size: 90px
+        line-height: 100%
+        letter-spacing: -0.01em
         text-transform: uppercase
         color: #FFFFFF
-        max-width: 792px
-        margin: 0 auto
+        text-shadow: 0px 1px 11px #FFA200, 0px 0px 8px #FFC000, 0px -1px 2px #FFFA00, 0px 1px 4px #FF8700
+        margin-bottom: 20px
+    &__subtitle
+        font-weight: 700
+        font-size: 24px
+        line-height: 120%
+        letter-spacing: 0.01em
+        color: #FFFFFF
+        margin-bottom: 34px
     &::after
         content: ''
         position: absolute
@@ -28,30 +40,16 @@
         left: 0
         right: 0
         width: 100%
-        height: 295px
-        background: linear-gradient(180deg, rgba(4, 34, 152, 0) 0%, rgba(4, 34, 152, 0.87) 71.76%, #042298 100%)
-        z-index: 2
-        pointer-events: none
-    &__tree
-        position: absolute
-        left: 50%
-        bottom: 0
-        transform: translate(-100%, 30px)
-        z-index: 1
-        pointer-events: none
-    &__santa
-        position: absolute
-        right: 50%
-        bottom: 0
-        transform: translateX(135%)
+        height: 600px
+        background: linear-gradient(180deg, rgba(20, 19, 81, 0) 37.92%, #141351 100%)
         z-index: 2
         pointer-events: none
 
+
 .spinner
     position: relative
-    width: 655px
-    height: 655px
-    margin: 30px auto 0px
+    min-width: 560px
+    height: 560px
     display: flex
     justify-content: center
     align-items: center
@@ -61,40 +59,27 @@
         width: 100%
         height: 100%
     &__hero
-        width: 573px
-        height: 573px
+        width: 465px
+        height: 465px
         transition: transform 4s ease-in-out 0s
         transform: rotate(0deg)
     &__pointer
         position: absolute
-        top: -15px
+        top: 21px
         left: 50%
-        transform: translate(-50%, 0)
-        width: 105px
+        transform: translate(-40%, 0)
+        width: 55px
     &__btn-wrap
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
     &__btn
-        background: url('../img/spinner/button.png') no-repeat
+        background: url('../img/wheel/btn.png') no-repeat
         background-size: 100% 100%
-        width: 185px
-        height: 185px
+        width: 96px
+        height: 96px
         border-radius: 50%
-        font-family: 'Inter'
-        font-style: normal
-        font-weight: 900
-        font-size: 40px
-        line-height: 110%
-        text-align: center
-        display: flex
-        justify-content: center
-        align-items: center
-        letter-spacing: 0.04em
-        text-transform: uppercase
-        color: #FFFFFF
-        transition: width .9s, height .9s
     &::before
         content: ''
         position: absolute
@@ -104,150 +89,136 @@
         bottom: 0
         left: -26%
         right: 0
-        background: url('../img/spinner/sparkles.png') no-repeat
+        background: url('../img/wheel/sparkles.png') no-repeat
         background-size: 100% 100%
         opacity: 0
         transition: opacity .6s ease
         pointer-events: none
 
 #spinner.spinning .spinner__hero
-    transform: rotate(2820deg)
-
-#spinner.spinned:before
-    opacity: 1
-
-.spinner__btn.spinned
-    width: 220px
-    height: 220px
-    animation: .6s ease-in-out .9s infinite alternate pulsing
-
-@keyframes pulsing
-    0%
-        transform: scale(1)
-    100%
-        transform: scale(0.9)
+    transform: rotate(60deg)
 
 
-@media screen and (max-width: 1240px)
-    .baner
-        &__tree
-            transform: translate(-90%, 30px)
-        &__santa
-            width: 500px
+// @media screen and (max-width: 1240px)
+//     .baner
+//         &__tree
+//             transform: translate(-90%, 30px)
+//         &__santa
+//             width: 500px
 
-@media screen and (max-width: 1024px)
-    .baner
-        padding-bottom: 400px
-        &__santa
-            transform: translateX(110%)
-        &__tree
-            width: 1000px
-            transform: translate(-85%, 30px)
+// @media screen and (max-width: 1024px)
+//     .baner
+//         padding-bottom: 400px
+//         &__santa
+//             transform: translateX(110%)
+//         &__tree
+//             width: 1000px
+//             transform: translate(-85%, 30px)
 
-@media screen and (max-width: 860px)
-    .baner
-        &__tree
-            width: 1075px
-            transform: translate(-79%, 30px)
-        &__title
-            font-size: 32px
-        &__logo 
-            padding: 36px 0 28px
-            & img
-                width: 100px
-    .spinner
-        margin: 40px auto 0px
-        &__btn
-            font-size: 32px
+// @media screen and (max-width: 860px)
+//     .baner
+//         &__tree
+//             width: 1075px
+//             transform: translate(-79%, 30px)
+//         &__title
+//             font-size: 32px
+//         &__logo 
+//             padding: 36px 0 28px
+//             & img
+//                 width: 100px
+//     .spinner
+//         margin: 40px auto 0px
+//         &__btn
+//             font-size: 32px
 
-@media screen and (max-width: 768px)
-    .spinner
-        width: 75vw
-        height: 75vw
-        &__hero
-            width: 66vw
-            height: 66vw
-        &__btn
-            width: 24vw
-            height: 24vw
-        &__pointer
-            width: 13vw
-    .spinner__btn.spinned
-        width: 28.5vw
-        height: 28.5vw
-    .baner
-        padding-bottom: 300px
-        &__santa
-            transform: translate(95%, 20%)
-        &__tree
-            width: 120vw
+// @media screen and (max-width: 768px)
+//     .spinner
+//         width: 75vw
+//         height: 75vw
+//         &__hero
+//             width: 66vw
+//             height: 66vw
+//         &__btn
+//             width: 24vw
+//             height: 24vw
+//         &__pointer
+//             width: 13vw
+//     .spinner__btn.spinned
+//         width: 28.5vw
+//         height: 28.5vw
+//     .baner
+//         padding-bottom: 300px
+//         &__santa
+//             transform: translate(95%, 20%)
+//         &__tree
+//             width: 120vw
 
-@media screen and (max-width: 700px)
-    .baner
-        &__tree
-            width: 125vw
+// @media screen and (max-width: 700px)
+//     .baner
+//         &__tree
+//             width: 125vw
 
-@media screen and (max-width: 600px)
-    .spinner
-        width: 85vw
-        height: 85vw
-        &__hero
-            width: 74vw
-            height: 74vw
-        &__pointer
-            width: 14vw
-        &__btn
-            font-size: 28px
-    .baner
-        padding-bottom: 200px
-        &__santa
-            width: 400px
-            transform: translate(92%, 28%)
-        &__title
-            font-size: 28px
-        &__logo img
-            width: 80px
+// @media screen and (max-width: 600px)
+//     .spinner
+//         width: 85vw
+//         height: 85vw
+//         &__hero
+//             width: 74vw
+//             height: 74vw
+//         &__pointer
+//             width: 14vw
+//         &__btn
+//             font-size: 28px
+//     .baner
+//         padding-bottom: 200px
+//         &__santa
+//             width: 400px
+//             transform: translate(92%, 28%)
+//         &__title
+//             font-size: 28px
+//         &__logo img
+//             width: 80px
 
-@media screen and (max-width: 550px)
-    .baner
-        &__tree
-            width: 130vw
+// @media screen and (max-width: 550px)
+//     .baner
+//         &__tree
+//             width: 130vw
 
-@media screen and (max-width: 500px)
-    .baner
-        &__santa
-            width: 350px
-            transform: translate(95%, 20%)
-        &__tree
-            width: 135vw
+// @media screen and (max-width: 500px)
+//     .baner
+//         &__santa
+//             width: 350px
+//             transform: translate(95%, 20%)
+//         &__tree
+//             width: 135vw
 
-@media screen and (max-width: 425px)
-    .baner
-        &__santa
-            width: 300px
-            transform: translate(95%, 13%)
-        &__tree
-            width: 145vw
-            transform: translate(-76%, 30px)
-        &__title
-            font-size: 20px
-        &__logo 
-            padding: 20px 0 26px
-            & img
-                width: 60px
-        &::after
-            height: 195px
-    .spinner
-        &__pointer
-            top: -10px
-        &__btn
-            font-size: 20px
+// @media screen and (max-width: 425px)
+//     .baner
+//         &__santa
+//             width: 300px
+//             transform: translate(95%, 13%)
+//         &__tree
+//             width: 145vw
+//             transform: translate(-76%, 30px)
+//         &__title
+//             font-size: 20px
+//         &__logo 
+//             padding: 20px 0 26px
+//             & img
+//                 width: 60px
+//         &::after
+//             height: 195px
+//     .spinner
+//         &__pointer
+//             top: -10px
+//         &__btn
+//             font-size: 20px
 
-@media screen and (max-width: 375px)
-    .baner
-        padding-bottom: 160px
-        &__santa
-            width: 250px
-            transform: translate(95%, 13%)
-    .spinner__btn.spinned
-        font-size: 18px
+// @media screen and (max-width: 375px)
+//     .baner
+//         padding-bottom: 160px
+//         &__santa
+//             width: 250px
+//             transform: translate(95%, 13%)
+//     .spinner__btn.spinned
+//         font-size: 18px

@@ -3,7 +3,23 @@ const spinner = document.querySelector('#spinner');
 const spinnerBtn = document.querySelector('.spinner__hero');
 const animTimeout = 2000;
 
+// hightlight prizes according to current date
+const initDate = 25; //for 25 december
+const currentDate = new Date().getDate();
 
+const prizesList = document.querySelectorAll('.prizes__item');
+const todayDateIndex = currentDate - initDate;
+if (todayDateIndex >= 0){
+    if (todayDateIndex < prizesList.length) 
+        prizesList[todayDateIndex].classList.add('today');
+
+    const lastIndex = todayDateIndex < prizesList.length ? todayDateIndex : prizesList.length - 1;
+    for (let index = 0; index <= lastIndex; index++) {
+        prizesList[index].classList.add('active');
+    }
+}
+
+//modals
 const openModal = (id) => {
     const modal = document.querySelector(`#${id}`);
     if (modal){

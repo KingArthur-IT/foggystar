@@ -568,13 +568,13 @@ body {
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 960px) {
   .features__icon {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }
   .features__text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 

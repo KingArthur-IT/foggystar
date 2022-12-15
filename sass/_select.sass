@@ -49,3 +49,13 @@
             pointer-events: all
         & .select__icon
             transform: rotate(180deg)
+.select-mobile
+    display: none
+
+@media screen and (max-width: 600px)
+    .select-desctop
+        display: none
+    .select-mobile
+        display: flex
+        z-index: 2
+        margin-top: 12px

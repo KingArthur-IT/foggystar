@@ -33,17 +33,25 @@ spinnerBtn.addEventListener('click', () => {
     }, animTimeout);
 });
 
+document.querySelectorAll('.prizes__item.active .prizes__btn').forEach(el => {
+    el.addEventListener('click', () => {
+        const day = el.getAttribute('data-day');
+        document.querySelector('#prize-modal .modal__head-text').innerHTML = `Mission ${day}`
+        document.querySelector('#prize-modal .modal__title').innerHTML = prizesData[day - 1].date;
+        document.querySelector('#prize-modal .modal__descr').innerHTML = prizesData[day - 1].description;
+        document.querySelector('#prize-modal .modal__btn').setAttribute('href', prizesData[day - 1].link);
+        openModal('prize-modal');
+    })
+})
 
-document.querySelectorAll('.modal__close').forEach(el => {
-    el.addEventListener('click', () => closeModal('ops-modal'));
-});
+document.querySelector('#ops-modal').querySelector('.modal__close').addEventListener('click', () => closeModal('ops-modal'));
+document.querySelector('#prize-modal').querySelector('.modal__close').addEventListener('click', () => closeModal('prize-modal'));
 
 document.querySelector('#ops-modal').addEventListener('click', () => closeModal('ops-modal'));
+document.querySelector('#prize-modal').addEventListener('click', () => closeModal('prize-modal'));
 
 
-document.querySelectorAll('.modal__hero').forEach(el => {
-    el.addEventListener('click', e => e.stopPropagation());
-});
+document.querySelectorAll('.modal__hero').forEach(el => { el.addEventListener('click', e => e.stopPropagation()) });
 
 
 //SELECT
@@ -54,3 +62,46 @@ selects.forEach(el => {
         el.classList.toggle('opened');
     });
 });
+
+const prizesData = [
+    {
+        date: '25 December',
+        description: 'Make 50 spins in “Christmas” category slots and get 1 Christmas Chance spin',
+        link: 'https://foggystarproject.com/en/catalog/casino/christmas'
+    },
+    {
+        date: '26 December',
+        description: 'Deposit of more than 30 EUR today and get 1 Christmas Chance spin',
+        link: 'https://foggystarproject.com/en/profile/cash'
+    },
+    {
+        date: '27 December',
+        description: 'Increase your loyalty level by 1 and get1 Christmas Chance spin',
+        link: 'https://foggystarproject.com/en/profile/dashboard'
+    },
+    {
+        date: '28 December',
+        description: 'Post the biggest Christmas slot win on twitter and tag @FoggystarC and get 1 Christmas Chance spin',
+        link: 'https://twitter.com/FoggystarC'
+    },
+    {
+        date: '29 December',
+        description: 'Catch the bonus in Christmas Big Bass Bonanza and fill the bonus gauge up to the maximum multiplier',
+        link: 'https://foggystarproject.com/en/play/960/vs10bxmasbnza?demo=true'
+    },
+    {
+        date: '30 December',
+        description: 'Deposit of more than 50 EUR today and get 1 Christmas Chance spin',
+        link: 'https://foggystarproject.com/en/profile/cash'
+    },
+    {
+        date: '31 December',
+        description: 'Hit a multiplier of more than x100 on your bet in a slot from the “Christmas” category and get 1 Christmas Chance spin',
+        link: 'https://foggystarproject.com/en/catalog/casino/christmas'
+    },
+    {
+        date: '01 January',
+        description: '1 holiday spin in Christmas Chance to everyone who completed all the previous tasks',
+        link: 'https://foggystarproject.com/en/promotions'
+    },
+]

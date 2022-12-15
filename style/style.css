@@ -294,6 +294,11 @@ body {
 
 .prizes__item.active .prizes__btn {
   opacity: 1;
+  cursor: pointer;
+}
+
+.prizes__item.active .prizes__btn:hover {
+  background: #e51b19;
 }
 
 .prizes__item.active .prizes__img {
@@ -379,10 +384,7 @@ body {
   transition: background .3s ease;
   opacity: 0.4;
   width: 154px;
-}
-
-.prizes__btn:hover {
-  background: #e51b19;
+  cursor: default;
 }
 
 .terms {
@@ -504,6 +506,9 @@ body {
   .prizes__btn {
     font-size: 10px;
     width: 100%;
+  }
+  .prizes__item.today .prizes__date::before {
+    height: 2px;
   }
 }
 

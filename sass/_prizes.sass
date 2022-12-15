@@ -41,6 +41,9 @@
         &.active
             .prizes__btn
                 opacity: 1
+                cursor: pointer
+                &:hover
+                    background: darken(#EB4846, 10%)
             .prizes__img
                 opacity: 1
                 filter: grayscale(0)
@@ -97,8 +100,7 @@
         transition: background .3s ease
         opacity: 0.4
         width: 154px
-        &:hover
-            background: darken(#EB4846, 10%)
+        cursor: default
 
 .terms
     max-width: 730px
@@ -191,6 +193,11 @@
         &__btn
             font-size: 10px
             width: 100%
+        &__item
+            &.today
+                .prizes__date
+                    &::before
+                        height: 2px
 
 @media screen and (max-width: 425px)
     .prizes

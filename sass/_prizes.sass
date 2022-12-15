@@ -137,6 +137,10 @@
     .prizes
         &__item
             flex-basis: 33%
+        &__hero
+            margin-bottom: 100px
+            background: url('../img/frame-tablet.png') no-repeat
+            background-size: 100% 100%
 
 @media screen and (max-width: 860px)
     .prizes
@@ -149,9 +153,12 @@
         &__item
             flex-basis: 50%
         &__hero
+            width: 104%
+            transform: translateX(-2%)
             margin-bottom: 100px
             background: url('../img/frame-mobile.png') no-repeat
             background-size: 100% 100%
+            padding: 50px 40px 10px
 
 @media screen and (max-width: 600px)
     .prizes
@@ -182,10 +189,13 @@
         &__item
             margin-bottom: 12px
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 500px)
     .prizes
         &__hero
-            padding: 32px 12px 0px
+            padding: 34px 30px 20px
+
+@media screen and (max-width: 480px)
+    .prizes
         &__date
             padding: 10px
             font-size: 14px
@@ -211,3 +221,9 @@
             margin-bottom: 30px
         &__hero
             margin-bottom: 60px
+            padding: 30px 26px 14px
+
+@media screen and (max-width: 350px)
+    .prizes
+        &__hero
+            padding: 26px 18px 12px

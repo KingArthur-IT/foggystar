@@ -5,10 +5,12 @@ const animTimeout = 2000;
 
 // hightlight prizes according to current date
 const initDate = 25; //for 25 december
+const initMonth = 11; //11 = December
 const currentDate = new Date().getDate();
+const currentMonth = new Date().getMonth();
 
 const prizesList = document.querySelectorAll('.prizes__item');
-const todayDateIndex = currentDate - initDate;
+const todayDateIndex = currentMonth === initMonth ? currentDate - initDate : (31 + currentDate - initDate);
 if (todayDateIndex >= 0){
     if (todayDateIndex < prizesList.length) 
         prizesList[todayDateIndex].classList.add('today');

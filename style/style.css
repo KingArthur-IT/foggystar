@@ -264,9 +264,9 @@ body {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -425,6 +425,101 @@ body {
   top: 8px;
   left: -12px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 960px) {
+  .prizes__item {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .prizes__title {
+    font-size: 42px;
+    max-width: 590px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .prizes__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .prizes__hero {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .prizes__hero {
+    margin-bottom: 80px;
+  }
+  .prizes__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 0 4px;
+    margin-bottom: 16px;
+  }
+  .prizes__day-num {
+    margin-bottom: 10px;
+  }
+  .prizes__img {
+    width: 80px;
+    margin-bottom: 24px;
+  }
+  .prizes__card {
+    padding: 12px;
+  }
+  .prizes__title {
+    font-size: 36px;
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+  .terms__text {
+    font-size: 14px;
+  }
+  .terms__title {
+    font-size: 20px;
+  }
+  .terms__list {
+    margin-top: 16px;
+  }
+  .terms__item {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prizes__hero {
+    padding: 32px 12px 0px;
+  }
+  .prizes__date {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .prizes__btn {
+    font-size: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .prizes__img {
+    width: 58px;
+    margin-bottom: 14px;
+  }
+  .prizes__card {
+    padding: 10px;
+  }
+  .prizes__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .prizes__hero {
+    margin-bottom: 60px;
+  }
 }
 
 .spinner {
@@ -608,6 +703,7 @@ body {
   border-radius: 5px;
   padding: 8px 16px;
   max-width: 230px;
+  z-index: 5;
 }
 
 .select__val {

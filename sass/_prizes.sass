@@ -20,7 +20,7 @@
     &__list
         display: flex
         align-items: stretch
-        justify-content: space-between
+        justify-content: flex-start
         flex-wrap: wrap
     &__item
         flex-basis: 25%
@@ -130,3 +130,75 @@
             top: 8px
             left: -12px
             border-radius: 50%
+
+@media screen and (max-width: 960px)
+    .prizes
+        &__item
+            flex-basis: 33%
+
+@media screen and (max-width: 860px)
+    .prizes
+        &__title
+            font-size: 42px
+            max-width: 590px
+
+@media screen and (max-width: 768px)
+    .prizes
+        &__item
+            flex-basis: 50%
+        &__hero
+            margin-bottom: 100px
+
+@media screen and (max-width: 600px)
+    .prizes
+        &__hero
+            margin-bottom: 80px
+        &__item
+            flex-basis: 50%
+            padding: 0 4px
+            margin-bottom: 16px
+        &__day-num
+            margin-bottom: 10px
+        &__img
+            width: 80px
+            margin-bottom: 24px
+        &__card
+            padding: 12px
+        &__title
+            font-size: 36px
+            max-width: 500px
+            margin-bottom: 40px
+    .terms
+        &__text
+            font-size: 14px
+        &__title
+            font-size: 20px
+        &__list
+            margin-top: 16px
+        &__item
+            margin-bottom: 12px
+
+@media screen and (max-width: 480px)
+    .prizes
+        &__hero
+            padding: 32px 12px 0px
+        &__date
+            padding: 10px
+            font-size: 14px
+            margin-bottom: 5px
+        &__btn
+            font-size: 10px
+            width: 100%
+
+@media screen and (max-width: 425px)
+    .prizes
+        &__img
+            width: 58px
+            margin-bottom: 14px
+        &__card
+            padding: 10px
+        &__title
+            font-size: 30px
+            margin-bottom: 30px
+        &__hero
+            margin-bottom: 60px

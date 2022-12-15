@@ -47,10 +47,10 @@ document.querySelectorAll('.modal__hero').forEach(el => {
 
 
 //SELECT
-const select = document.querySelector('.select');
-const selectItems = select.querySelectorAll('.select__item');
-const selectVal = select.querySelector('.select__val');
+const selects = document.querySelectorAll('.select');
 
-select.addEventListener('click', () => {
-    select.classList.toggle('opened');
+selects.forEach(el => {
+    el.addEventListener('click', () => {
+        el.classList.toggle('opened');
+    });
 });

@@ -3,7 +3,6 @@
     background-position-x: center
     background-size: cover
     padding-bottom: 60px
-    overflow: hidden
     min-height: 100vh
     display: flex
     align-items: center
@@ -49,94 +48,3 @@
         background: linear-gradient(180deg, rgba(20, 19, 81, 0) 37.92%, #141351 100%)
         z-index: 1
         pointer-events: none
-
-
-.spinner
-    position: relative
-    min-width: 560px
-    height: 560px
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 2
-    &__bg
-        position: absolute
-        width: 100%
-        height: 100%
-    &__hero
-        width: 465px
-        height: 465px
-        transition: transform 4s ease-in-out 0s
-        transform: rotate(0deg)
-    &__pointer
-        position: absolute
-        top: 21px
-        left: 50%
-        transform: translate(-40%, 0)
-        width: 55px
-    &__btn-wrap
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    &__btn
-        background: url('../img/wheel/btn.png') no-repeat
-        background-size: 100% 100%
-        width: 96px
-        height: 96px
-        border-radius: 50%
-
-#spinner.spinning .spinner__hero
-    transform: rotate(60deg)
-
-.select
-    position: relative
-    cursor: pointer
-    display: flex
-    align-items: center
-    justify-content: center
-    background: rgba(247, 243, 255, 0.1)
-    border: 1px solid rgba(255, 255, 255, 0.1)
-    backdrop-filter: blur(15px)
-    border-radius: 5px
-    padding: 8px 16px
-    max-width: 230px
-    &__val
-        color: #fff
-        font-weight: 700
-        font-size: 14px
-        line-height: 171%
-        letter-spacing: 0.01em
-        text-align: center
-    &__icon
-        margin-left: 12px
-        transform: rotate(0deg)
-        transition: transform .3s ease
-    &__list
-        position: absolute
-        top: 105%
-        left: 0
-        right: 0
-        border-radius: 5px
-        background: rgba(247, 243, 255, 0.1)
-        border: 1px solid rgba(255, 255, 255, 0.1)
-        backdrop-filter: blur(15px)
-        z-index: 2
-        transform: translateY(-5px)
-        opacity: 0
-        pointer-events: none
-        transition: opacity .3s ease, transform .3s ease
-        & li
-            padding: 8px 5px 8px 14px
-            cursor: pointer
-            color: #fff
-            transition: color .2s ease
-            &:hover
-                color: rgba(255, 255, 255, 1)
-    &.opened 
-        & .select__list
-            transform: translateY(0px)
-            opacity: 1
-            pointer-events: all
-        & .select__icon
-            transform: rotate(180deg)

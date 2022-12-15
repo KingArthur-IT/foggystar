@@ -4,10 +4,9 @@
     bottom: 0
     left: 0
     right: 0
-    background: rgba(5, 0, 20, 0.7)
+    background: rgba(5, 0, 20, 0.5)
     backdrop-filter: blur(2px)
     z-index: 100
-    overflow-y: scroll
     display: none
     opacity: 0
     transition: opacity .3s ease
@@ -19,196 +18,81 @@
         opacity: 1
     &__container
         min-height: 100%
-        max-width: 635px
+        max-width: 785px
         display: flex
         justify-content: center
-        align-items: stretch
+        align-items: center
         margin: 0 auto
         position: relative
     &__hero
         width: 100%
-        min-height: 100%
-        background: url('../img/modal-bg.jpg') no-repeat
-        background-size: 100% 100%
-        padding: 50px 64px 40px
+        height: 450px
+        padding: 40px 55px
         display: flex
         flex-direction: column
         justify-content: flex-start
         position: relative
-        box-shadow: 0px 0px 33px #000000
-        border-radius: 15px
-    &__title
-        font-family: 'Inter'
-        font-weight: 800
-        font-size: 42px
-        line-height: 130%
-        text-align: center
-        letter-spacing: 0.01em
-        text-transform: uppercase
-        background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, #AFE2FF 0%, #5292F2 100%);
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        background-clip: text
-        text-fill-color: transparent
-        text-shadow: 0px 0px 24px rgba(101, 227, 255, 0.7)
-        margin-bottom: 16px
+        &::after
+            content: ''
+            position: absolute
+            pointer-events: none
+            width: 100%
+            height: 100%
+            background: url('../img/wheel-popup-desktop.png') no-repeat
+            background-size: 100% 100%
+            top: 0
+            left: 0
+    &__content
+        background: rgba(16, 13, 63, 0.5)
+        backdrop-filter: blur(22px)
+        border-radius: 28px
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
     &__close
         position: absolute
-        top: 16px
-        right: 16px
-        width: 16px
-        height: 16px
+        right: 30px
+        top: 0
         cursor: pointer
         & path
             transition: all .2s ease
-        &:hover path
-            stroke: #FE333C
-    &__description
-        font-family: 'Inter'
-        font-weight: 400
-        font-size: 16px
-        line-height: 1.5
-        text-align: center
-        color: rgba(255, 255, 255, 0.8)
-        margin-bottom: 40px
-    &__inputs
-        margin-bottom: 24px
-    &__input
-        margin-bottom: 12px
-    &__row
-        display: flex
-        justify-content: space-between
-    &__checkbox-wrap
-        width: 100%
-        margin-bottom: 16px
-        & label
-            position: relative
-            display: block
-            width: fit-content
-            margin: auto
-            padding-left: 36px
-            cursor: pointer
-            color: #fff
-            font-size: 14px
-            font-weight: 400
-            line-height: 1.5
-            &::before
-                content: ""
-                position: absolute
-                top: 45%
-                left: 0
-                width: 18px
-                height: 18px
-                transform: translateY(-50%)
-                background: rgba(255, 255, 255, 0.2)
-                border-radius: 4px
-                cursor: pointer
-            & a
-                color: #FE333C
-                font-weight: 500
-                transition: color .3s ease
-                &:hover
-                    color: #fff
-        & input[type="checkbox"]:checked ~ label::before
-            content: '✓'
-            padding-left: 4px
-        & input[type="checkbox"].error ~ label::before
-            border: 1px solid #FE333C
-        & input
-            display: none
-    &__btn
-        color: #fff
-        background: #FE333C
-        border-radius: 9px
-        margin: 0 auto
-        margin-top: 24px
-        margin-bottom: 32px
-        width: 140px
-        height: 44px
-        font-weight: 800
-        font-size: 14px
-        line-height: 1.4
-        text-align: center
-        letter-spacing: 0.01em
-        transition: background .2s ease
         &:hover
-            background: darken(#FE333C, 10%)
-    &__has-account
-        font-weight: 400
-        font-size: 14px
-        line-height: 1.57
-        color: #FFFFFF
+            & path
+                stroke-opacity: 1
+    &__head-text
+        font-weight: 600
+        font-size: 16px
+        line-height: 120%
         text-align: center
-        & a
-            font-weight: 700
-            color: #FE333C
-            transition: color .3s ease
-            &:hover
-                color: #fff
-
-.input
-    width: 100%
-    background: rgba(255, 255, 255, 0.2)
-    border-radius: 4px
-    color: #fff
-    padding: 14px 16px
-    font-weight: 500
-    font-size: 16px
-    border: 1px solid transparent
-    transition: border .2s ease
-    &:focus
-        outline: none
-        border: 1px solid rgba(255, 255, 255, 0.29)
-    &::placeholder
-        color: rgba(255, 255, 255, 0.6)
-    &.error
-        border: 1px solid #FE333C
-
-
-@media screen and (max-width: 680px)
-    .modal
-        &__hero
-            padding: 50px 40px 40px
-        &__title
-            font-size: 36px
-
-@media screen and (max-width: 600px)
-    .modal
-        padding: 30px 0
-
-@media screen and (max-width: 475px)
-    .modal
-        padding: 0
-        &__container
-            padding: 0
-        &__hero
-            border-radius: 0
-        &__title
-            font-size: 32px
-
-@media screen and (max-width: 425px)
-    .modal
-        &__hero
-            padding: 50px 20px 40px
-        &__title
-            font-size: 26px
-        &__description
-            font-size: 14px
-            margin-bottom: 20px
-        &__inputs
-            margin-bottom: 20px
-        &__checkbox-wrap
-            margin-bottom: 8px
-            & label
-                padding-left: 28px
-                font-size: 12px
-                &::before
-                    top: 45%
-                    left: 0
-                    width: 16px
-                    height: 16px
-                    transform: translateY(-50%)
-        &__btn
-            margin-bottom: 30px
-    .input
+        color: #FFFFFF
+        margin-bottom: 5px
+    &__big-title
+        font-weight: 800
+        font-size: 34px
+        line-height: 120%
+        text-align: center
+        letter-spacing: -0.03em
+        color: #FFFFFF
+        text-shadow: 0px 1px 12px #FFA200
+        margin-bottom: 70px
+        max-width: 412px
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 7px 39px 8px
+        min-width: 128px
+        background: #EB4846
+        border-radius: 5px
+        font-weight: 700
         font-size: 14px
+        line-height: 171%
+        letter-spacing: 0.01em
+        color: #FFFFFF
+        transition: background .3s ease
+        &:hover
+            background: darken(#EB4846, 10%)
+        

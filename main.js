@@ -1,11 +1,11 @@
 //SPINNER and MODAL
 const spinner = document.querySelector('#spinner');
-const spinnerBtn = document.querySelector('.spinner__btn');
+const spinnerBtn = document.querySelector('.spinner__hero');
 const animTimeout = 2000;
-const modal = document.querySelector('.modal');
 
 
-const openModal = () => {
+const openModal = (id) => {
+    const modal = document.querySelector(`#${id}`);
     if (modal){
         modal.classList.add('displayed');
         document.querySelector('body').classList.add('overflow-hidden');
@@ -15,7 +15,8 @@ const openModal = () => {
     }
 }
 
-const closeModal = () => {
+const closeModal = (id) => {
+    const modal = document.querySelector(`#${id}`);
     if (modal){
         modal.classList.remove('visible');
         document.querySelector('body').classList.remove('overflow-hidden');
@@ -26,17 +27,22 @@ const closeModal = () => {
 };
 
 spinnerBtn.addEventListener('click', () => {
-    const isSpinned = spinnerBtn.classList.contains('spinned');
-
-    if (!isSpinned)
-        spinner.classList.add('spinning'); //spinning
-    else openModal();
+    spinner.classList.add('spinning');
+    setTimeout(() => {
+        openModal('ops-modal');
+    }, animTimeout);
 });
 
-document.querySelector('.modal__close')?.addEventListener('click', () => closeModal());
-modal.addEventListener('click', () => closeModal());
+document.querySelectorAll('.modal__close').forEach(el => {
+    el.addEventListener('click', () => closeModal('ops-modal'));
+});
 
-document.querySelector('.modal__hero').addEventListener('click', e => e.stopPropagation());
+document.querySelector('#ops-modal').addEventListener('click', () => closeModal('ops-modal'));
+
+
+document.querySelectorAll('.modal__hero').forEach(el => {
+    el.addEventListener('click', e => e.stopPropagation());
+});
 
 
 //SELECT

@@ -5,11 +5,15 @@
     padding-bottom: 60px
     overflow: hidden
     min-height: 100vh
+    display: flex
+    align-items: center
+    padding: 40px 0
     &__hero
         display: flex
         justify-content: space-between
         align-items: center
     &__content
+        margin-right: 30px
     &__text
         font-weight: 500
         font-size: 20px
@@ -98,127 +102,49 @@
 #spinner.spinning .spinner__hero
     transform: rotate(60deg)
 
-
-// @media screen and (max-width: 1240px)
-//     .baner
-//         &__tree
-//             transform: translate(-90%, 30px)
-//         &__santa
-//             width: 500px
-
-// @media screen and (max-width: 1024px)
-//     .baner
-//         padding-bottom: 400px
-//         &__santa
-//             transform: translateX(110%)
-//         &__tree
-//             width: 1000px
-//             transform: translate(-85%, 30px)
-
-// @media screen and (max-width: 860px)
-//     .baner
-//         &__tree
-//             width: 1075px
-//             transform: translate(-79%, 30px)
-//         &__title
-//             font-size: 32px
-//         &__logo 
-//             padding: 36px 0 28px
-//             & img
-//                 width: 100px
-//     .spinner
-//         margin: 40px auto 0px
-//         &__btn
-//             font-size: 32px
-
-// @media screen and (max-width: 768px)
-//     .spinner
-//         width: 75vw
-//         height: 75vw
-//         &__hero
-//             width: 66vw
-//             height: 66vw
-//         &__btn
-//             width: 24vw
-//             height: 24vw
-//         &__pointer
-//             width: 13vw
-//     .spinner__btn.spinned
-//         width: 28.5vw
-//         height: 28.5vw
-//     .baner
-//         padding-bottom: 300px
-//         &__santa
-//             transform: translate(95%, 20%)
-//         &__tree
-//             width: 120vw
-
-// @media screen and (max-width: 700px)
-//     .baner
-//         &__tree
-//             width: 125vw
-
-// @media screen and (max-width: 600px)
-//     .spinner
-//         width: 85vw
-//         height: 85vw
-//         &__hero
-//             width: 74vw
-//             height: 74vw
-//         &__pointer
-//             width: 14vw
-//         &__btn
-//             font-size: 28px
-//     .baner
-//         padding-bottom: 200px
-//         &__santa
-//             width: 400px
-//             transform: translate(92%, 28%)
-//         &__title
-//             font-size: 28px
-//         &__logo img
-//             width: 80px
-
-// @media screen and (max-width: 550px)
-//     .baner
-//         &__tree
-//             width: 130vw
-
-// @media screen and (max-width: 500px)
-//     .baner
-//         &__santa
-//             width: 350px
-//             transform: translate(95%, 20%)
-//         &__tree
-//             width: 135vw
-
-// @media screen and (max-width: 425px)
-//     .baner
-//         &__santa
-//             width: 300px
-//             transform: translate(95%, 13%)
-//         &__tree
-//             width: 145vw
-//             transform: translate(-76%, 30px)
-//         &__title
-//             font-size: 20px
-//         &__logo 
-//             padding: 20px 0 26px
-//             & img
-//                 width: 60px
-//         &::after
-//             height: 195px
-//     .spinner
-//         &__pointer
-//             top: -10px
-//         &__btn
-//             font-size: 20px
-
-// @media screen and (max-width: 375px)
-//     .baner
-//         padding-bottom: 160px
-//         &__santa
-//             width: 250px
-//             transform: translate(95%, 13%)
-//     .spinner__btn.spinned
-//         font-size: 18px
+.select
+    position: relative
+    margin-right: 12px
+    cursor: pointer
+    &__val
+        color: rgba(255, 255, 255, 0.6)
+        &.selected
+            color: #fff
+    &.error
+        border: 1px solid #FE333C
+    &__icon
+        position: absolute
+        cursor: pointer
+        right: 16px
+        top: 16px
+        transform: rotate(0deg)
+        transition: transform .3s ease
+    &__list
+        position: absolute
+        top: 103%
+        left: 0
+        right: 0
+        border-radius: 4px
+        background-color: rgba(255, 255, 255, 0.2)
+        z-index: 2
+        transform: translateY(-5px)
+        opacity: 0
+        pointer-events: none
+        backdrop-filter: blur(4px)
+        transition: opacity .3s ease, transform .3s ease
+        max-height: 190px
+        overflow-y: scroll
+        & li
+            padding: 14px 16px
+            cursor: pointer
+            color: rgba(255, 255, 255, 0.6)
+            transition: color .2s ease
+            &:hover
+                color: rgba(255, 255, 255, 1)
+    &.opened 
+        & .select__list
+            transform: translateY(0px)
+            opacity: 1
+            pointer-events: all
+        & .select__icon
+            transform: rotate(180deg)

@@ -14,6 +14,7 @@
         align-items: center
     &__content
         margin-right: 30px
+        z-index: 2
     &__text
         font-weight: 500
         font-size: 20px
@@ -46,7 +47,7 @@
         width: 100%
         height: 600px
         background: linear-gradient(180deg, rgba(20, 19, 81, 0) 37.92%, #141351 100%)
-        z-index: 2
+        z-index: 1
         pointer-events: none
 
 
@@ -84,60 +85,51 @@
         width: 96px
         height: 96px
         border-radius: 50%
-    &::before
-        content: ''
-        position: absolute
-        width: 160%
-        height: 160%
-        top: -32%
-        bottom: 0
-        left: -26%
-        right: 0
-        background: url('../img/wheel/sparkles.png') no-repeat
-        background-size: 100% 100%
-        opacity: 0
-        transition: opacity .6s ease
-        pointer-events: none
 
 #spinner.spinning .spinner__hero
     transform: rotate(60deg)
 
 .select
     position: relative
-    margin-right: 12px
     cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgba(247, 243, 255, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(15px)
+    border-radius: 5px
+    padding: 8px 16px
+    max-width: 230px
     &__val
-        color: rgba(255, 255, 255, 0.6)
-        &.selected
-            color: #fff
-    &.error
-        border: 1px solid #FE333C
+        color: #fff
+        font-weight: 700
+        font-size: 14px
+        line-height: 171%
+        letter-spacing: 0.01em
+        text-align: center
     &__icon
-        position: absolute
-        cursor: pointer
-        right: 16px
-        top: 16px
+        margin-left: 12px
         transform: rotate(0deg)
         transition: transform .3s ease
     &__list
         position: absolute
-        top: 103%
+        top: 105%
         left: 0
         right: 0
-        border-radius: 4px
-        background-color: rgba(255, 255, 255, 0.2)
+        border-radius: 5px
+        background: rgba(247, 243, 255, 0.1)
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        backdrop-filter: blur(15px)
         z-index: 2
         transform: translateY(-5px)
         opacity: 0
         pointer-events: none
-        backdrop-filter: blur(4px)
         transition: opacity .3s ease, transform .3s ease
-        max-height: 190px
-        overflow-y: scroll
         & li
-            padding: 14px 16px
+            padding: 8px 5px 8px 14px
             cursor: pointer
-            color: rgba(255, 255, 255, 0.6)
+            color: #fff
             transition: color .2s ease
             &:hover
                 color: rgba(255, 255, 255, 1)

@@ -18,6 +18,21 @@
                     <p class="baner__text">Every day from 25.12.22 to 01.01.23</p>
                     <h1 class="baner__title">Christmas Chance</h1>
                     <h2 class="baner__subtitle">Get Christmas Chance spins for completed missions and win up to 5000 daily</h2>
+                    <div class="select" id="prizes-select">
+                        <div class="select__val">Possible prizes</div>
+                        <svg class="select__icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.71052 0.217703L4.49078 3.27884L1.27103 0.217704C0.976748 -0.0525231 0.508969 -0.0486584 0.21967 0.22639C-0.0696301 0.501439 -0.0736948 0.946174 0.210534 1.22596L3.96053 4.79123C4.2534 5.06959 4.72815 5.06959 5.02102 4.79123L8.77102 1.22596C8.96598 1.04693 9.04418 0.781815 8.97554 0.53251C8.9069 0.283206 8.70212 0.0885107 8.4399 0.0232553C8.17768 -0.042 7.89882 0.0323401 7.71052 0.217703Z" fill="white" fill-opacity="0.7"/>
+                        </svg>                                                            
+                        <ul class="select__list">
+                            <li class="select__item">1. 2023 EUR in cash</li>
+                            <li class="select__item">2. iPhone 14 Pro</li>
+                            <li class="select__item">3. 500 EUR instant bonus</li>
+                            <li class="select__item">4. 150% reload bonus</li>
+                            <li class="select__item">5. 30 FS in Gift Rush</li>
+                            <li class="select__item">6. 5 EUR instant bonus</li>
+                            <li class="select__item">7. 50 Layalty Points</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="spinner" id="spinner">
                     <img src="./img/wheel/bg.png" class="spinner__bg">
@@ -30,45 +45,101 @@
             </div>
         </div>
     </section>
-    <section class="section features d-none">
+    <section class="section prizes">
         <div class="container">
-            <ul class="features__list">
-                <li class="features__item">
-                    <img src="./img/list/payouts.png" alt="Fast payouts" class="features__icon">
-                    <p class="features__text">Fast payouts</p>
-                </li>
-                <li class="features__item">
-                    <img src="./img/list/legal.png" alt="legal" class="features__icon">
-                    <p class="features__text">Licensed & legal online casino</p>
-                </li>
-                <li class="features__item">
-                    <img src="./img/list/games.png" alt="games" class="features__icon">
-                    <p class="features__text">7000+ games</p>
-                </li>
-                <li class="features__item">
-                    <img src="./img/list/loyalty.png" alt="loyalty" class="features__icon">
-                    <p class="features__text">100-Level Loyalty Program</p>
-                </li>
-                <li class="features__item">
-                    <img src="./img/list/bonuses.png" alt="bonuses" class="features__icon">
-                    <p class="features__text">bonuses up to €10 000 for each deposit</p>
-                </li>
-            </ul>
-        </div>
-        <footer class="footer">
-            <div class="container">
-                <ul class="footer__list">
-                    <img src="./img/partners/visa.png" alt="visa" class="footer__item">
-                    <img src="./img/partners/mc.png" alt="mastercard" class="footer__item">
-                    <img src="./img/partners/mifinity.png" alt="mifinity" class="mifinity footer__item">
-                    <img src="./img/partners/scrill.png" alt="scrill" class="scrill footer__item">
-                    <img src="./img/partners/jeton.png" alt="jeton" class="scrill footer__item">
-                    <img src="./img/partners/zeewallet.png" alt="zeewallet" class="scrill footer__item">
-                    <img src="./img/partners/btc.png" alt="btc" class="btc footer__item">
-                    <img src="./img/partners/ethereum.png" alt="ethereum" class="ethr footer__item">
+            <h2 class="prizes__title">Complete tasks and win prizes</h2>
+            <div class="prizes__hero">
+                <ul class="prizes__list">
+                    <li class="prizes__item active">
+                        <div class="prizes__date">25.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">1 Day</div>
+                            <img src="./img/presents/present 1.png" alt="1" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item active today">
+                        <div class="prizes__date">26.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">2 Day</div>
+                            <img src="./img/presents/present 2.png" alt="2" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item">
+                        <div class="prizes__date">27.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">3 Day</div>
+                            <img src="./img/presents/present 3.png" alt="3" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item">
+                        <div class="prizes__date">28.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">4 Day</div>
+                            <img src="./img/presents/present 4.png" alt="4" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item">
+                        <div class="prizes__date">29.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">5 Day</div>
+                            <img src="./img/presents/present 5.png" alt="5" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item">
+                        <div class="prizes__date">30.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">6 Day</div>
+                            <img src="./img/presents/present 6.png" alt="6" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item">
+                        <div class="prizes__date">31.12.22</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">7 Day</div>
+                            <img src="./img/presents/present 7.png" alt="7" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
+                    <li class="prizes__item">
+                        <div class="prizes__date">01.01.23</div>
+                        <div class="prizes__card">
+                            <div class="prizes__day-num">8 Day</div>
+                            <img src="./img/presents/present 8.png" alt="8" class="prizes__img">
+                            <button class="btn prizes__btn">Read the task</button>
+                        </div>
+                    </li>
                 </ul>
             </div>
-        </footer>
+            <div class="terms">
+                <h3 class="terms__title">Terms: </h3>
+                <p class="terms__text">
+                    Quests change daily at 12:00 UTC, rewards are given to players daily during the quest update. Take part in our lottery and win gifts from FoggyStar. 
+                    <ul class="terms__list">
+                        <li class="terms__item">
+                            Every day, participants have access to the task of the day. To find out its conditions, click on the corresponding cell of the calendar. 
+                        </li>
+                        <li class="terms__item">
+                            Tasks are available for execution only on the specified date. 
+                        </li>
+                        <li class="terms__item">
+                            Spin Christmas Chance is available to the player within a few hours after completing the task, the spin can be found in the bonus section in the personal account.
+                        </li>
+                        <li class="terms__item">
+                            Only real money bets count. 
+                        </li>
+                        <li class="terms__item">
+                            If the slots participating in the promotion are unavailable, write to the support service, and you will be offered an alternative game to complete the task.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
     </section>
     <div class="modal d-none">
         <div class="container modal__container">

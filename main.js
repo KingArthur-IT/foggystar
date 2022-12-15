@@ -48,17 +48,6 @@ select.addEventListener('click', () => {
     select.classList.toggle('opened');
 });
 
-selectItems.forEach(item => {
-    item.addEventListener('click', () => {
-        selectVal.innerHTML = item.innerHTML;
-        if (!selectVal.classList.contains('selected')){
-            selectVal.classList.add('selected');
-            select.classList.remove('error');
-        }
-    })
-});
-
-
 //REQUEST
 const modalBtn = document.querySelector('.modal__btn');
 const emailInput = document.querySelector('#email');

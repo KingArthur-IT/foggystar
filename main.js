@@ -1,7 +1,7 @@
 //SPINNER and MODAL
 const spinner = document.querySelector('#spinner');
 const spinnerBtn = document.querySelector('.spinner__btn');
-const animTimeout = 2000;
+const animTimeout = 4000;
 const modal = document.querySelector('.modal');
 
 

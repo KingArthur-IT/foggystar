@@ -1,0 +1,99 @@
+.details
+    padding: 100px 100px 30px
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        flex-wrap: wrap
+        width: calc(100% + 60px)
+        transform: translateX(-30px)
+        margin-bottom: 105px
+    &__item-wrap
+        padding: 0 30px
+        flex-basis: 33.33%
+        min-height: 100%
+    &__item
+        background: rgba(255, 255, 255, 0.06)
+        border: 3px solid #FFFFFF
+        border-radius: 30px
+        display: flex
+        align-items: center
+        color: #FFFFFF
+        padding: 29px 55px
+        height: 100%
+    &__num
+        font-weight: 900
+        font-size: 120px
+        line-height: 110%
+        text-transform: uppercase
+        margin-right: 22px
+    &__content
+    &__step-name
+        font-weight: 900
+        font-size: 30px
+        line-height: 110%
+        text-align: center
+        text-transform: uppercase
+    &__step-descr
+        font-weight: 500
+        font-size: 18px
+        line-height: 110%
+        text-align: center
+    &__btn
+        padding: 7px 39px 8px
+        background: #EB4846
+        border-radius: 10px
+        color: #fff
+        font-weight: 900
+        font-size: 18px
+        line-height: 133%
+        letter-spacing: 0.01em
+        display: block
+        max-width: 220px
+        height: 53px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: auto
+        margin-bottom: 105px
+
+.terms
+    max-width: 730px
+    &__title
+        font-weight: 800
+        font-size: 24px
+        line-height: 140%
+        color: #FFFFFF
+        margin-bottom: 30px
+    &__list
+    &__item
+        position: relative
+        padding-left: 20px
+        font-size: 16px
+        line-height: 150%
+        color: rgba(255, 255, 255, 0.75)
+        margin-bottom: 12px
+        &::before
+            content: ''
+            position: absolute
+            width: 2px
+            height: 2px
+            background: rgba(255, 255, 255, 0.75)
+            left: 9px
+            top: 11px
+    &__more
+        display: flex
+        align-items: center
+        margin-top: 20px
+        cursor: pointer
+        & span
+            font-weight: 800
+            font-size: 16px
+            line-height: 140%
+            color: rgba(255, 255, 255, 0.75)
+            margin-right: 10px
+    &__shevron
+        transform: rotate(0)
+        transition: transform .3s ease
+
+            

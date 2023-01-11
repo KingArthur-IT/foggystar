@@ -68,8 +68,8 @@ body {
   pointer-events: none;
 }
 
-.overflow-hidden {
-  overflow: hidden;
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 425px) {
@@ -89,7 +89,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 100px 0 40px;
+  padding: 100px 0 100px;
 }
 
 .baner__title {
@@ -126,7 +126,19 @@ body {
   margin-bottom: 60px;
 }
 
+.baner__spinner {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.baner__spinner img {
+  height: 100%;
+  width: 100%;
+}
+
 .baner__content {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   padding-left: 90px;
 }
 
@@ -141,6 +153,10 @@ body {
   margin-bottom: 20px;
 }
 
+.baner__subtitle.tablet {
+  display: none;
+}
+
 .baner__promo-wrap {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -152,10 +168,34 @@ body {
 }
 
 .baner__info {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 6px;
   margin-left: auto;
   display: block;
   cursor: pointer;
+  position: relative;
+}
+
+.baner__info:hover .baner__info-tooltip {
+  opacity: 1;
+}
+
+.baner__info-tooltip {
+  position: absolute;
+  top: 80%;
+  left: calc(100% + 8px);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-radius: 0px 10px 10px 10px;
+  padding: 15px;
+  min-width: 340px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
 }
 
 .baner__text {
@@ -211,6 +251,10 @@ body {
   margin-bottom: 15px;
 }
 
+.baner__btn-wrap {
+  width: 100%;
+}
+
 .baner__btn {
   padding: 7px 39px 8px;
   background: #EB4846;
@@ -233,6 +277,182 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+
+.baner__btn:hover {
+  background: #e51b19;
+}
+
+.tablet {
+  display: none;
+}
+
+@media screen and (max-width: 1630px) {
+  .baner__info-tooltip {
+    bottom: calc(100% + 8px);
+    top: auto;
+    left: auto;
+    right: 10px;
+    border-radius: 10px 10px 0px 10px;
+    background: white;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .baner__wrapper {
+    padding: 60px 30px;
+  }
+  .baner__content {
+    padding-left: 40px;
+  }
+  .baner__hero {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .baner__subtitle {
+    font-size: 24px;
+  }
+  .baner__content {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  .baner__spinner {
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+  }
+  .baner__promocode {
+    padding: 10px 31px 7px;
+  }
+  .baner__clipboard {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .baner {
+    padding-bottom: 0;
+  }
+  .baner__title {
+    font-size: 50px;
+    margin-bottom: 24px;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    padding: 0 30px;
+  }
+  .baner__subtitle {
+    display: none;
+  }
+  .baner__subtitle.tablet {
+    display: block;
+    font-size: 20px;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+    padding: 0 30px;
+  }
+  .baner__wrapper {
+    background: transparent;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+    border-radius: 0;
+    padding: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  .baner__hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+  .baner__spinner {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 60px;
+    padding: 0 30px;
+  }
+  .baner__content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    background: #18191B;
+    width: 100vw;
+    padding: 23px 30px 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .baner__promo-wrap {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .baner__btn-wrap {
+    background: #18191B;
+    padding: 0 30px;
+  }
+  .baner__btn-wrap a {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .baner__btn-wrap a {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .baner__title {
+    font-size: 40px;
+    -webkit-transform: translateX(-17px);
+            transform: translateX(-17px);
+    padding: 0 17px;
+  }
+  .baner__subtitle.tablet {
+    -webkit-transform: translateX(-17px);
+            transform: translateX(-17px);
+    padding: 0 17px;
+  }
+  .baner__wrapper {
+    -webkit-transform: translateX(-17px);
+            transform: translateX(-17px);
+  }
+  .baner__spinner {
+    padding: 0 17px;
+  }
+  .baner__content {
+    padding: 23px 17px 18px;
+  }
+  .baner__text {
+    font-size: 16px;
+  }
+  .baner__promocode {
+    max-width: 170px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
+  .baner__promocode-val {
+    font-size: 18px;
+  }
+  .baner__clipboard {
+    width: 25px;
+    height: 25px;
+  }
+  .baner__btn-wrap {
+    padding: 0 17px;
+  }
+  .baner__btn {
+    font-size: 16px;
+  }
 }
 
 .details {
@@ -327,6 +547,10 @@ body {
   margin-bottom: 105px;
 }
 
+.details__btn:hover {
+  background: #e51b19;
+}
+
 .terms {
   max-width: 730px;
 }
@@ -405,7 +629,6 @@ body {
   border-radius: 10px;
   padding: 8px 16px;
   width: 100%;
-  z-index: 5;
 }
 
 .select__val {
@@ -437,7 +660,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  z-index: 2;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   opacity: 0;
@@ -489,4 +711,17 @@ body {
 .select.opened .select__icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .select {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
+  .select__list {
+    top: calc(100% + 23px);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+  }
 }

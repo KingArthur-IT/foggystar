@@ -5,7 +5,7 @@
     min-height: 100vh
     display: flex
     align-items: center
-    padding: 100px 0 40px
+    padding: 100px 0 100px
     &__title
         font-weight: 800
         font-size: 50px
@@ -28,7 +28,12 @@
         align-items: center
         margin-bottom: 60px
     &__spinner
+        flex-basis: 50%
+        & img
+            height: 100%
+            width: 100%
     &__content
+        flex-basis: 50%
         padding-left: 90px
     &__subtitle
         font-weight: 800
@@ -39,6 +44,8 @@
         text-transform: capitalize
         color: #E0F9FF
         margin-bottom: 20px
+        &.tablet
+            display: none
     &__promo-wrap
         background: rgba(255, 255, 255, 0.05)
         border: 1px solid rgba(255, 255, 255, 0.1)
@@ -47,10 +54,26 @@
         padding: 20px
         margin-bottom: 26px
     &__info
+        width: fit-content
         margin-bottom: 6px
         margin-left: auto
         display: block
         cursor: pointer
+        position: relative
+        &:hover .baner__info-tooltip
+            opacity: 1
+    &__info-tooltip
+        position: absolute
+        top: 80%
+        left: calc(100% + 8px)
+        background: rgba(255, 255, 255, 0.8)
+        backdrop-filter: blur(12px)
+        border-radius: 0px 10px 10px 10px
+        padding: 15px
+        min-width: 340px
+        opacity: 0
+        pointer-events: none
+        transition: opacity .3s ease
     &__text
         font-weight: 500
         font-size: 20px
@@ -84,6 +107,8 @@
     &__descr
         text-align: center
         margin-bottom: 15px
+    &__btn-wrap
+        width: 100%
     &__btn
         padding: 7px 39px 8px
         background: #EB4846
@@ -100,62 +125,125 @@
         align-items: center
         justify-content: center
         margin: auto
+        transition: background .3s ease
+        &:hover
+            background: darken(#EB4846, 10%)
 
-// @media screen and (max-width: 1300px)
-//     .baner
-//         &__title
-//             font-size: 60px
-//         &__subtitle
-//             font-size: 20px
-//         &__text
-//             font-size: 18px
-//         &__content
-//             max-width: 460px
+.tablet
+    display: none
 
-// @media screen and (max-width: 860px)
-//     .baner
-//         &__title
-//             font-size: 52px
-//         &__subtitle
-//             font-size: 18px
-//         &__text
-//             font-size: 16px
-//         &__content
-//             max-width: 460px
-//             margin-right: 15px
+@media screen and (max-width: 1630px)
+    .baner
+        &__info-tooltip
+            bottom: calc(100% + 8px)
+            top: auto
+            left: auto
+            right: 10px
+            border-radius: 10px 10px 0px 10px
+            background: rgba(255, 255, 255, 1)
 
-// @media screen and (max-width: 760px)
-//     .baner
-//         &__title
-//             font-size: 42px
-//             margin-bottom: 15px
-//         &__subtitle
-//             font-size: 16px
-//         &__text
-//             font-size: 14px
-//             margin-bottom: 15px
-//         &__content
-//             max-width: 460px
-//             margin-right: 15px
+@media screen and (max-width: 1150px)
+    .baner
+        &__wrapper
+            padding: 60px 30px
+        &__content
+            padding-left: 40px
+        &__hero
+            margin-bottom: 40px
 
-// @media screen and (max-width: 600px)
-//     .baner
-//         background: url('../img/baner-mobile-bg.jpg') no-repeat
-//         background-position-x: center
-//         background-size: 100% 100%
-//         &__hero
-//             flex-direction: column
-//         &__title
-//             text-align: center
-//         &__subtitle
-//             text-align: center
-//             margin-bottom: 12px
-//         &__text
-//             text-align: center
-//         &__content
-//             margin-right: 0
+@media screen and (max-width: 1024px)
+    .baner
+        &__subtitle
+            font-size: 24px
+        &__content
+            flex-basis: 45%
+        &__spinner
+            flex-basis: 55%
+        &__promocode
+            padding: 10px 31px 7px
+        &__clipboard
+            width: 30px
 
-// @media screen and (max-width: 425px)
-//     .baner
-//         &__title
-//             font-size: 40px
+@media screen and (max-width: 768px)
+    .baner
+        padding-bottom: 0
+        &__title
+            font-size: 50px
+            margin-bottom: 24px
+            transform: translateX(-30px)
+            padding: 0 30px
+        &__subtitle
+            display: none
+            &.tablet
+                display: block
+                font-size: 20px
+                transform: translateX(-30px)
+                padding: 0 30px
+        &__wrapper
+            background: transparent
+            backdrop-filter: blur(0)
+            border-radius: 0
+            padding: 0
+            transform: translateX(-30px)
+        &__hero
+            flex-direction: column
+            margin-bottom: 0
+        &__spinner
+            flex-basis: 100%
+            margin-bottom: 60px
+            padding: 0 30px
+        &__content
+            flex-basis: 100%
+            background: #18191B
+            width: 100vw
+            padding: 23px 30px 18px
+            display: flex
+            flex-direction: column-reverse
+        &__promo-wrap
+            width: 100%
+            max-width: 400px
+            margin: 0 auto
+        &__btn-wrap
+            background: #18191B
+            padding: 0 30px
+            & a
+                min-width: 400px
+
+@media screen and (max-width: 460px)
+    .baner
+        &__btn-wrap
+            & a
+                min-width: 100%
+
+@media screen and (max-width: 425px)
+    .baner
+        &__title
+            font-size: 40px
+            transform: translateX(-17px)
+            padding: 0 17px
+        &__subtitle
+            &.tablet
+                transform: translateX(-17px)
+                padding: 0 17px
+        &__wrapper
+            transform: translateX(-17px)
+        &__spinner
+            padding: 0 17px
+        &__content
+            padding: 23px 17px 18px
+        &__text
+            font-size: 16px
+        &__promocode
+            max-width: 170px
+            margin: 0 auto
+            margin-bottom: 30px
+            border-radius: 15px
+        &__promocode-val
+            font-size: 18px
+        &__clipboard
+            width: 25px
+            height: 25px
+        &__btn-wrap
+            padding: 0 17px
+        &__btn
+            font-size: 16px

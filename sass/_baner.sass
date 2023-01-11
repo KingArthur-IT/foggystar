@@ -6,6 +6,7 @@
     display: flex
     align-items: center
     padding: 100px 0 100px
+    position: relative
     &__title
         font-weight: 800
         font-size: 50px
@@ -87,6 +88,7 @@
         margin-bottom: 15px
         text-align: center
     &__promocode
+        position: relative
         padding: 14px 31px
         background: rgba(255, 255, 255, 0.5)
         border: 1px dashed #FFFFFF
@@ -95,6 +97,18 @@
         justify-content: space-between
         align-items: center
         margin-bottom: 30px
+        & .clipboard-msg
+            position: absolute
+            background: #fff
+            padding: 5px 10px
+            border-radius: 7px
+            right: 10%
+            top: 80%
+            font-size: 14px
+            opacity: 0
+            transition: opacity .5s ease-in-out
+            &.opened
+                opacity: 1
     &__promocode-val
         font-family: 'Inter'
         font-weight: 900
@@ -144,6 +158,7 @@
 
 @media screen and (max-width: 1150px)
     .baner
+        background-position-x: left
         &__wrapper
             padding: 60px 30px
         &__content
@@ -167,6 +182,15 @@
 @media screen and (max-width: 768px)
     .baner
         padding-bottom: 0
+        &::before
+            content: ''
+            position: absolute
+            pointer-events: none
+            top: 0
+            bottom: 0
+            right: 0
+            background: linear-gradient(270.71deg, #021618 9.41%, rgba(2, 49, 68, 0) 88.95%)
+            width: 50%
         &__title
             font-size: 50px
             margin-bottom: 24px
@@ -225,14 +249,20 @@
             &.tablet
                 transform: translateX(-17px)
                 padding: 0 17px
+                font-size: 16px
         &__wrapper
             transform: translateX(-17px)
         &__spinner
             padding: 0 17px
+            margin-bottom: 40px
         &__content
             padding: 23px 17px 18px
         &__text
             font-size: 16px
+        &__promo-wrap
+            padding: 15px
+        &__info
+            margin-bottom: 0
         &__promocode
             max-width: 170px
             margin: 0 auto
@@ -247,3 +277,4 @@
             padding: 0 17px
         &__btn
             font-size: 16px
+            height: 44px

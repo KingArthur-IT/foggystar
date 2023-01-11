@@ -89,7 +89,7 @@
     &__more
         display: flex
         align-items: center
-        margin-top: 20px
+        margin-top: 10px
         cursor: pointer
         & span
             font-weight: 800
@@ -97,9 +97,22 @@
             line-height: 140%
             color: rgba(255, 255, 255, 0.75)
             margin-right: 10px
+            &.opened
+                display: none
+        &.opened
+            & span
+                display: none
+                &.opened
+                    display: block
+            & .terms__shevron
+                transform: rotate(0deg)
     &__shevron
-        transform: rotate(0)
-        transition: transform .3s ease
+        transform: rotate(180deg)
+        transition: transform .6s ease
+    & .list-hidden
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.2s ease-out
 
 
 @media screen and (max-width: 1630px)
@@ -137,6 +150,7 @@
             flex-direction: column
             width: 100%
             transform: translateX(0)
+            margin-bottom: 60px
         &__item-wrap
             padding: 0
             flex-basis: 100%
@@ -146,12 +160,13 @@
 
 @media screen and (max-width: 768px)
     .details
+        padding: 60px 30px 30px
         &__btn
             display: none
 
 @media screen and (max-width: 425px)
     .details
-        padding: 100px 17px 30px
+        padding: 40px 17px 30px
         &__item-wrap
             width: 100%
             margin-bottom: 18px

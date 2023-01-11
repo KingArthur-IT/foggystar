@@ -198,6 +198,7 @@ body {
   padding: 15px;
   min-width: 340px;
   opacity: 0;
+  pointer-events: none;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }

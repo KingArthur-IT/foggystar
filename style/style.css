@@ -168,6 +168,10 @@ body {
   margin-bottom: 26px;
 }
 
+.baner__promo-wrap:hover {
+  z-index: 20;
+}
+
 .baner__info {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -194,7 +198,6 @@ body {
   padding: 15px;
   min-width: 340px;
   opacity: 0;
-  pointer-events: none;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
 }
@@ -474,6 +477,10 @@ body {
   .baner__info {
     margin-bottom: 0;
   }
+  .baner__info-tooltip {
+    min-width: 265px;
+    font-size: 12px;
+  }
   .baner__promocode {
     max-width: 170px;
     margin: 0 auto;
@@ -690,6 +697,9 @@ body {
   .details__num {
     font-size: 110px;
   }
+  .details__step-name {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -737,7 +747,7 @@ body {
     padding: 0;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    max-width: 460px;
+    width: 460px;
     margin: auto;
     margin-bottom: 30px;
   }
@@ -749,6 +759,12 @@ body {
   }
   .details__btn {
     display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .details__item-wrap {
+    width: 100%;
   }
 }
 
@@ -796,11 +812,10 @@ body {
           justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
   border-radius: 10px;
   padding: 8px 16px;
   width: 100%;
+  z-index: 10;
 }
 
 .select__val {
@@ -828,7 +843,7 @@ body {
   left: 0;
   right: 0;
   border-radius: 10px;
-  background: rgba(247, 243, 255, 0.05);
+  background: rgba(247, 243, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);

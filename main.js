@@ -28,6 +28,6 @@ clipboardBtn.addEventListener('click', () => {
             document.querySelector('.clipboard-msg').classList.remove('opened')
         }, 1500);
     } catch (error) {
-        
+        console.log(error);   
     }
 })

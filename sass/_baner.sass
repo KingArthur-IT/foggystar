@@ -54,6 +54,8 @@
         border-radius: 10px
         padding: 20px
         margin-bottom: 26px
+        &:hover
+            z-index: 20
     &__info
         width: fit-content
         margin-bottom: 6px
@@ -73,7 +75,7 @@
         padding: 15px
         min-width: 340px
         opacity: 0
-        pointer-events: none
+        // pointer-events: none
         transition: opacity .3s ease
     &__text
         font-weight: 500
@@ -263,6 +265,9 @@
             padding: 15px
         &__info
             margin-bottom: 0
+        &__info-tooltip
+            min-width: 265px
+            font-size: 12px
         &__promocode
             max-width: 170px
             margin: 0 auto

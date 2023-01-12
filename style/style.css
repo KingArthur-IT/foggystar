@@ -106,13 +106,23 @@ body {
 }
 
 .baner__wrapper {
+  position: relative;
   width: 100%;
   max-width: 1090px;
+  padding: 80px 80px 60px 80px;
+}
+
+.baner__wrapper::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: rgba(255, 255, 255, 0.06);
+  border-radius: 30px;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  border-radius: 30px;
-  padding: 80px 80px 60px 80px;
 }
 
 .baner__hero {
@@ -391,13 +401,12 @@ body {
     padding: 0 30px;
   }
   .baner__wrapper {
-    background: transparent;
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-    border-radius: 0;
     padding: 0;
     -webkit-transform: translateX(-30px);
             transform: translateX(-30px);
+  }
+  .baner__wrapper::before {
+    display: none;
   }
   .baner__hero {
     -webkit-box-orient: vertical;

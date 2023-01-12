@@ -18,12 +18,20 @@
         text-shadow: 0px 1px 11px #FFA200, 0px 0px 8px #FFC000, 0px -1px 2px #FFFA00, 0px 1px 4px #FF8700
         margin-bottom: 60px
     &__wrapper
+        position: relative
         width: 100%
         max-width: 1090px
-        background: rgba(255, 255, 255, 0.06)
-        backdrop-filter: blur(15px)
-        border-radius: 30px
         padding: 80px 80px 60px 80px
+        &::before
+            position: absolute
+            content: ''
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: rgba(255, 255, 255, 0.06)
+            border-radius: 30px
+            backdrop-filter: blur(15px)
     &__hero
         display: flex
         justify-content: space-between
@@ -207,11 +215,10 @@
                 transform: translateX(-30px)
                 padding: 0 30px
         &__wrapper
-            background: transparent
-            backdrop-filter: blur(0)
-            border-radius: 0
             padding: 0
             transform: translateX(-30px)
+            &::before
+                display: none
         &__hero
             flex-direction: column
             margin-bottom: 0

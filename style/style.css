@@ -91,6 +91,7 @@ body {
           align-items: center;
   padding: 100px 0 100px;
   position: relative;
+  z-index: 10;
 }
 
 .baner__title {
@@ -844,7 +845,7 @@ body {
   left: 0;
   right: 0;
   border-radius: 10px;
-  background: rgba(247, 243, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
@@ -911,5 +912,12 @@ body {
     top: calc(100% + 23px);
     -webkit-backdrop-filter: blur(12px);
             backdrop-filter: blur(12px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .select__list {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }

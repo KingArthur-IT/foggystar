@@ -94,6 +94,37 @@ body {
   z-index: 10;
 }
 
+.baner__container {
+  position: relative;
+}
+
+.baner__container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/shines.png") no-repeat;
+  background-size: cover;
+  width: 675px;
+  height: 570px;
+  -webkit-transform: translate(-35%, -3%);
+          transform: translate(-35%, -3%);
+}
+
+.baner__container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/shines.png") no-repeat;
+  background-size: cover;
+  width: 675px;
+  height: 570px;
+  -webkit-transform: translate(40%, -20%);
+          transform: translate(40%, -20%);
+  z-index: 1;
+}
+
 .baner__title {
   font-weight: 800;
   font-size: 50px;
@@ -103,6 +134,7 @@ body {
   color: #FFFFFF;
   text-shadow: 0px 1px 11px #FFA200, 0px 0px 8px #FFC000, 0px -1px 2px #FFFA00, 0px 1px 4px #FF8700;
   margin-bottom: 60px;
+  z-index: 2;
 }
 
 .baner__wrapper {
@@ -141,6 +173,7 @@ body {
 .baner__spinner {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  z-index: 2;
 }
 
 .baner__spinner img {
@@ -163,6 +196,7 @@ body {
   text-transform: capitalize;
   color: #E0F9FF;
   margin-bottom: 20px;
+  z-index: 2;
 }
 
 .baner__subtitle.tablet {
@@ -382,6 +416,16 @@ body {
     right: 0;
     background: linear-gradient(270.71deg, #021618 9.41%, rgba(2, 49, 68, 0) 88.95%);
     width: 50%;
+  }
+  .baner__container::after {
+    display: none;
+  }
+  .baner__container::before {
+    right: auto;
+    left: 0;
+    -webkit-transform: translate(-45%, -10%);
+            transform: translate(-45%, -10%);
+    z-index: 0;
   }
   .baner__title {
     font-size: 50px;

@@ -8,6 +8,29 @@
     padding: 100px 0 100px
     position: relative
     z-index: 10
+    &__container
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            background: url('../img/shines.png') no-repeat
+            background-size: cover
+            width: 675px
+            height: 570px
+            transform: translate(-35%, -3%)
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            background: url('../img/shines.png') no-repeat
+            background-size: cover
+            width: 675px
+            height: 570px
+            transform: translate(40%, -20%)
+            z-index: 1
     &__title
         font-weight: 800
         font-size: 50px
@@ -17,6 +40,7 @@
         color: #FFFFFF
         text-shadow: 0px 1px 11px #FFA200, 0px 0px 8px #FFC000, 0px -1px 2px #FFFA00, 0px 1px 4px #FF8700
         margin-bottom: 60px
+        z-index: 2
     &__wrapper
         position: relative
         width: 100%
@@ -39,6 +63,7 @@
         margin-bottom: 60px
     &__spinner
         flex-basis: 50%
+        z-index: 2
         & img
             height: 100%
             width: 100%
@@ -54,6 +79,7 @@
         text-transform: capitalize
         color: #E0F9FF
         margin-bottom: 20px
+        z-index: 2
         &.tablet
             display: none
     &__promo-wrap
@@ -202,6 +228,14 @@
             right: 0
             background: linear-gradient(270.71deg, #021618 9.41%, rgba(2, 49, 68, 0) 88.95%)
             width: 50%
+        &__container
+            &::after
+                display: none
+            &::before
+                right: auto
+                left: 0
+                transform: translate(-45%, -10%)
+                z-index: 0
         &__title
             font-size: 50px
             margin-bottom: 24px

@@ -512,6 +512,10 @@ body {
   transition: background .3s ease, color .2s ease;
 }
 
+.spinner__btn:visited {
+  color: #B3385E;
+}
+
 .spinner__btn:hover {
   background: url("../img/wheel/btn-hover.png") no-repeat;
   background-size: 100% 100%;
@@ -545,7 +549,7 @@ body {
     height: 510px;
   }
   .spinner__pointer {
-    width: 90px;
+    width: 85px;
   }
   .spinner__section {
     width: 165px;

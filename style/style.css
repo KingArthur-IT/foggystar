@@ -72,6 +72,14 @@ body {
   overflow: hidden;
 }
 
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 @media screen and (max-width: 425px) {
   .container {
     padding: 0 17px;
@@ -412,6 +420,10 @@ body {
   .baner-eth {
     width: 67px;
   }
+  .heart {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .spinner {
@@ -443,10 +455,10 @@ body {
 .spinner__hero {
   width: 585px;
   height: 585px;
-  -webkit-transition: -webkit-transform 2s ease-in-out 0s;
-  transition: -webkit-transform 2s ease-in-out 0s;
-  transition: transform 2s ease-in-out 0s;
-  transition: transform 2s ease-in-out 0s, -webkit-transform 2s ease-in-out 0s;
+  -webkit-transition: -webkit-transform 6s ease 0s;
+  transition: -webkit-transform 6s ease 0s;
+  transition: transform 6s ease 0s;
+  transition: transform 6s ease 0s, -webkit-transform 6s ease 0s;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   cursor: pointer;
@@ -467,8 +479,8 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-43%, 0px);
-          transform: translate(-43%, 0px);
+  -webkit-transform: translate(-44%, 0px);
+          transform: translate(-44%, 0px);
   z-index: 1;
   pointer-events: none;
 }
@@ -496,11 +508,29 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #B3385E;
+  -webkit-transition: background .3s ease, color .2s ease;
+  transition: background .3s ease, color .2s ease;
+}
+
+.spinner__btn:hover {
+  background: url("../img/wheel/btn-hover.png") no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+.spinner__btn:active {
+  background: url("../img/wheel/btn-active.png") no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+.spinner__btn.spinned {
+  font-size: 34px;
 }
 
 #spinner.spinning .spinner__hero {
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
+  -webkit-transform: rotate(1348deg);
+          transform: rotate(1348deg);
 }
 
 @media screen and (max-width: 1630px) {
@@ -515,7 +545,7 @@ body {
     height: 510px;
   }
   .spinner__pointer {
-    width: 100px;
+    width: 90px;
   }
   .spinner__section {
     width: 165px;
@@ -524,6 +554,9 @@ body {
     width: 165px;
     height: 165px;
     font-size: 34px;
+  }
+  .spinner__btn.spinned {
+    font-size: 28px;
   }
 }
 
@@ -549,6 +582,9 @@ body {
     height: 130px;
     font-size: 27px;
   }
+  .spinner__btn.spinned {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -561,6 +597,7 @@ body {
   .spinner__hero {
     width: 305px;
     height: 305px;
+    margin-right: 6px;
   }
   .spinner__pointer {
     width: 50px;
@@ -574,6 +611,9 @@ body {
     width: 100px;
     height: 100px;
     font-size: 21px;
+  }
+  .spinner__btn.spinned {
+    font-size: 17px;
   }
 }
 
@@ -599,5 +639,8 @@ body {
     width: 23vw;
     height: 23vw;
     font-size: 16px;
+  }
+  .spinner__btn.spinned {
+    font-size: 13px;
   }
 }

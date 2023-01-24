@@ -12,181 +12,34 @@
 </head>
 <body>
     <section class="section baner">
+        <div class="baner__angel1"></div>
+        <div class="baner__angel2"></div>
+        <div class="baner__angel3"></div>
         <div class="container">
             <div class="baner__hero">
-                <div class="baner__content">
-                    <p class="baner__text">Every day from 25.12.22 to 01.01.23</p>
-                    <h1 class="baner__title">Christmas Chance</h1>
-                    <h2 class="baner__subtitle">Get Christmas Chance spins for completed missions and win up to 5000 daily</h2>
-                    <div class="select select-desctop">
-                        <div class="select__val">Possible prizes</div>
-                        <svg class="select__icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.71052 0.217703L4.49078 3.27884L1.27103 0.217704C0.976748 -0.0525231 0.508969 -0.0486584 0.21967 0.22639C-0.0696301 0.501439 -0.0736948 0.946174 0.210534 1.22596L3.96053 4.79123C4.2534 5.06959 4.72815 5.06959 5.02102 4.79123L8.77102 1.22596C8.96598 1.04693 9.04418 0.781815 8.97554 0.53251C8.9069 0.283206 8.70212 0.0885107 8.4399 0.0232553C8.17768 -0.042 7.89882 0.0323401 7.71052 0.217703Z" fill="white" fill-opacity="0.7"/>
-                        </svg>                                                            
-                        <ul class="select__list">
-                            <li class="select__item">1. 2023 EUR in cash</li>
-                            <li class="select__item">2. iPhone 14 Pro</li>
-                            <li class="select__item">3. 500 EUR instant bonus</li>
-                            <li class="select__item">4. 150% reload bonus</li>
-                            <li class="select__item">5. 30 FS in Gift Rush</li>
-                            <li class="select__item">6. 5 EUR instant bonus</li>
-                            <li class="select__item">7. 50 Layalty Points</li>
-                        </ul>
-                    </div>
-                </div>
+                <img src="./img/logo.png" alt="Foggy Star" class="baner__logo">
+                <h1 class="baner__title">Spin and win the bonus you will love!</h1>
                 <div class="spinner" id="spinner">
                     <img src="./img/wheel/bg.png" class="spinner__bg">
                     <img src="./img/wheel/content.png" class="spinner__hero">
+                    <img src="./img/wheel/section.png" class="spinner__section">
                     <img src="./img/wheel/pointer.png" class="spinner__pointer">
                     <div class="spinner__btn-wrap">
-                        <button class="btn spinner__btn" id="spinner-btn"></button>
+                        <button class="btn spinner__btn" id="spinner-btn">spin</button>
                     </div>
                 </div>
-                <div class="select select-mobile">
-                    <div class="select__val">Possible prizes</div>
-                    <svg class="select__icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.71052 0.217703L4.49078 3.27884L1.27103 0.217704C0.976748 -0.0525231 0.508969 -0.0486584 0.21967 0.22639C-0.0696301 0.501439 -0.0736948 0.946174 0.210534 1.22596L3.96053 4.79123C4.2534 5.06959 4.72815 5.06959 5.02102 4.79123L8.77102 1.22596C8.96598 1.04693 9.04418 0.781815 8.97554 0.53251C8.9069 0.283206 8.70212 0.0885107 8.4399 0.0232553C8.17768 -0.042 7.89882 0.0323401 7.71052 0.217703Z" fill="white" fill-opacity="0.7"/>
-                    </svg>                                                            
-                    <ul class="select__list">
-                        <li class="select__item">1. 2023 EUR in cash</li>
-                        <li class="select__item">2. iPhone 14 Pro</li>
-                        <li class="select__item">3. 500 EUR instant bonus</li>
-                        <li class="select__item">4. 150% reload bonus</li>
-                        <li class="select__item">5. 30 FS in Gift Rush</li>
-                        <li class="select__item">6. 5 EUR instant bonus</li>
-                        <li class="select__item">7. 50 Layalty Points</li>
-                    </ul>
+                <div class="baner__list">
+                    <img src="./img/partners/visa.png" alt="visa" class="baner__partner baner-visa">
+                    <img src="./img/partners/mc.png" alt="mastercard" class="baner__partner baner-mc">
+                    <img src="./img/partners/mifinity.png" alt="mifinity" class="baner__partner baner-mifinity">
+                    <img src="./img/partners/scrill.png" alt="scrill" class="baner__partner baner-scrill">
+                    <img src="./img/partners/geton.png" alt="geton" class="baner__partner baner-geton">
+                    <img src="./img/partners/wallet.png" alt="wallet" class="baner__partner baner-wallet">
+                    <img src="./img/partners/btc.png" alt="btc" class="baner__partner baner-btc">
+                    <img src="./img/partners/eth.png" alt="eth" class="baner__partner baner-eth">
                 </div>
-            </div>
         </div>
     </section>
-    <section class="section prizes">
-        <div class="container">
-            <h2 class="prizes__title">Complete tasks and win prizes</h2>
-            <div class="prizes__hero">
-                <ul class="prizes__list">
-                    <li class="prizes__item">
-                        <div class="prizes__date">25.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">1 Day</div>
-                            <img src="./img/presents/present 1.png" alt="1" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="1">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">26.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">2 Day</div>
-                            <img src="./img/presents/present 2.png" alt="2" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="2">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">27.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">3 Day</div>
-                            <img src="./img/presents/present 3.png" alt="3" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="3">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">28.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">4 Day</div>
-                            <img src="./img/presents/present 4.png" alt="4" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="4">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">29.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">5 Day</div>
-                            <img src="./img/presents/present 5.png" alt="5" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="5">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">30.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">6 Day</div>
-                            <img src="./img/presents/present 6.png" alt="6" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="6">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">31.12.22</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">7 Day</div>
-                            <img src="./img/presents/present 7.png" alt="7" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="7">Read the task</button>
-                        </div>
-                    </li>
-                    <li class="prizes__item">
-                        <div class="prizes__date">01.01.23</div>
-                        <div class="prizes__card">
-                            <div class="prizes__day-num">8 Day</div>
-                            <img src="./img/presents/present 8.png" alt="8" class="prizes__img">
-                            <button class="btn prizes__btn" data-day="8">Read the task</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="terms">
-                <h3 class="terms__title">Terms: </h3>
-                <p class="terms__text">
-                    Quests change daily at 12:00 UTC, rewards are given to players daily during the quest update. Take part in our lottery and win gifts from FoggyStar. 
-                    <ul class="terms__list">
-                        <li class="terms__item">
-                            Every day, participants have access to the task of the day. To find out its conditions, click on the corresponding cell of the calendar. 
-                        </li>
-                        <li class="terms__item">
-                            Tasks are available for execution only on the specified date. 
-                        </li>
-                        <li class="terms__item">
-                            Spin Christmas Chance is available to the player within a few hours after completing the task, the spin can be found in the bonus section in the personal account.
-                        </li>
-                        <li class="terms__item">
-                            Only real money bets count. 
-                        </li>
-                        <li class="terms__item">
-                            If the slots participating in the promotion are unavailable, write to the support service, and you will be offered an alternative game to complete the task.
-                        </li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </section>
-    <div class="modal" id="ops-modal">
-        <div class="container modal__container">
-            <div class="modal__hero">
-                <svg class="modal__close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2L2 14" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 2L14 14" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                                      
-                <div class="modal__content">
-                    <div class="modal__head-text">Ooops…</div>
-                    <h3 class="modal__big-title"> Finish today’s mission and get Christmas Spin!</h3>
-                    <a href="" class="btn modal__btn">Start</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="prize-modal">
-        <div class="container modal__container">
-            <div class="modal__hero prizes">
-                <svg class="modal__close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2L2 14" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 2L14 14" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                                      
-                <div class="modal__content">
-                    <div class="modal__head-text">Mission 1  </div>
-                    <h3 class="modal__title">25 December</h3>
-                    <p class="modal__descr">Make 50 spins in “Christmas” category slots and get 1 Christmas Chance spin.</p>
-                    <a href="" class="btn modal__btn">Start</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="./main.js"></script>
 </html>

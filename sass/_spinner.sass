@@ -1,28 +1,41 @@
 .spinner
     position: relative
-    min-width: 560px
-    height: 560px
+    width: 665px
+    height: 665px
     display: flex
     justify-content: center
     align-items: center
+    margin: 0 auto
+    filter: drop-shadow(0px 4px 100px #FFEAFF)
+    margin-bottom: 40px
     z-index: 2
     &__bg
         position: absolute
         width: 100%
         height: 100%
     &__hero
-        width: 465px
-        height: 465px
+        width: 585px
+        height: 585px
         transition: transform 2s ease-in-out 0s
         transform: rotate(0deg)
         cursor: pointer
+        margin-right: 10px
     &__pointer
         position: absolute
-        top: 21px
+        top: 18px
         left: 50%
-        transform: translate(-40%, 0)
-        width: 55px
+        transform: translate(-45%, -15px)
+        width: 100px
+        z-index: 2
+    &__section
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-43%, 0px)
+        z-index: 1
+        pointer-events: none
     &__btn-wrap
+        cursor: pointer
         position: absolute
         top: 50%
         left: 50%
@@ -30,82 +43,87 @@
     &__btn
         background: url('../img/wheel/btn.png') no-repeat
         background-size: 100% 100%
-        width: 96px
-        height: 96px
+        width: 200px
+        height: 200px
         border-radius: 50%
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 900
+        font-size: 40px
+        line-height: 110%
+        text-align: center
+        text-transform: uppercase
+        color: #B3385E
 
 #spinner.spinning .spinner__hero
     transform: rotate(60deg)
 
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1630px)
     .spinner
-        width: 400px
-        min-width: 400px
-        height: 400px
+        width: 580px
+        height: 580px
+        filter: drop-shadow(0px 3.4px 85px #FFEAFF)
         &__hero
-            width: 335px
-            height: 335px
-        &__btn
-            width: 76px
-            height: 76px
+            width: 510px
+            height: 510px
         &__pointer
-            width: 45px
-            top: 13px
-
-@media screen and (max-width: 860px)
-    .spinner
-        width: 360px
-        min-width: 360px
-        height: 360px
-        &__hero
-            width: 300px
-            height: 300px
+            width: 100px
+        &__section
+            width: 165px
         &__btn
-            width: 76px
-            height: 76px
+            width: 165px
+            height: 165px
+            font-size: 34px
+
+@media screen and (max-width: 1240px)
+    .spinner
+        width: 450px
+        height: 450px
+        filter: drop-shadow(0px 2.75px 68px #FFEAFF)
+        &__hero
+            width: 395px
+            height: 395px
         &__pointer
-            width: 36px
-
-@media screen and (max-width: 760px)
-    .spinner
-        width: 300px
-        min-width: 300px
-        height: 300px
-        &__hero
-            width: 250px
-            height: 250px
+            width: 65px
+        &__section
+            width: 128px
         &__btn
+            width: 130px
+            height: 130px
+            font-size: 27px
+
+@media screen and (max-width: 960px)
+    .spinner
+        width: 350px
+        height: 350px
+        filter: drop-shadow(0px 2px 50px #FFEAFF)
+        &__hero
+            width: 305px
+            height: 305px
+        &__pointer
             width: 50px
-            height: 50px
-        &__pointer
-            width: 26px
-
-@media screen and (max-width: 650px)
-    .spinner
-        width: 260px
-        min-width: 260px
-        height: 260px
-        &__hero
-            width: 215px
-            height: 215px
+        &__section
+            width: 100px
+            transform: translate(-45%, 0px)
         &__btn
-            width: 50px
-            height: 50px
-        &__pointer
-            width: 26px
-            top: 9px
+            width: 100px
+            height: 100px
+            font-size: 21px
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 375px)
     .spinner
-        width: 285px
-        min-width: 285px
-        height: 285px
+        width: calc( 100vw - 30px )
+        height: calc( 100vw - 30px )
+        filter: drop-shadow(0px 1.6px 40px #FFEAFF)
         &__hero
-            width: 237px
-            height: 237px
-        &__btn
-            width: 60px
-            height: 60px
+            width: calc( 100vw - 65px )
+            height: calc( 100vw - 65px )
+            margin-right: 4px
         &__pointer
-            width: 26px
-            top: 9px
+            width: 13vw
+        &__section
+            width: 27vw
+        &__btn
+            width: 23vw
+            height: 23vw
+            font-size: 16px

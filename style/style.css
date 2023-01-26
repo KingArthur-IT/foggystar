@@ -231,6 +231,10 @@ body {
   .baner-eth {
     width: 104px;
   }
+  .baner__angel3 {
+    width: 27vw;
+    height: 20vw;
+  }
 }
 
 @media screen and (max-width: 1240px) {
@@ -494,6 +498,14 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.spinner__btn-wrap.spinned {
+  -webkit-animation: pulsing 0.6s ease-in-out infinite alternate;
+          animation: pulsing 0.6s ease-in-out infinite alternate;
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
+  z-index: 1;
+}
+
 .spinner__btn {
   background: url("../img/wheel/btn.png") no-repeat;
   background-size: 100% 100%;
@@ -533,34 +545,35 @@ body {
 }
 
 #spinner.spinning .spinner__hero {
-  -webkit-transform: rotate(1348deg);
-          transform: rotate(1348deg);
+  -webkit-transform: rotate(2428deg);
+          transform: rotate(2428deg);
 }
 
 @media screen and (max-width: 1630px) {
   .spinner {
-    width: 580px;
-    height: 580px;
+    width: 58vh;
+    height: 58vh;
+    margin-bottom: 20px;
     -webkit-filter: drop-shadow(0px 3.4px 85px #FFEAFF);
             filter: drop-shadow(0px 3.4px 85px #FFEAFF);
   }
   .spinner__hero {
-    width: 510px;
-    height: 510px;
+    width: 51vh;
+    height: 51vh;
   }
   .spinner__pointer {
-    width: 85px;
+    width: 9vh;
   }
   .spinner__section {
-    width: 165px;
+    width: 17vh;
   }
   .spinner__btn {
-    width: 165px;
-    height: 165px;
-    font-size: 34px;
+    width: 16vh;
+    height: 16vh;
+    font-size: 32px;
   }
   .spinner__btn.spinned {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
@@ -646,5 +659,27 @@ body {
   }
   .spinner__btn.spinned {
     font-size: 13px;
+  }
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.98) translate(-50%, -50%);
+            transform: scale(0.98) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.02) translate(-50%, -50%);
+            transform: scale(1.02) translate(-50%, -50%);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.98) translate(-50%, -50%);
+            transform: scale(0.98) translate(-50%, -50%);
+  }
+  100% {
+    -webkit-transform: scale(1.02) translate(-50%, -50%);
+            transform: scale(1.02) translate(-50%, -50%);
   }
 }

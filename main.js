@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     spinnerBtn.addEventListener('click', (e) => {    
         spinner.classList.add('spinning');
         setTimeout(() => {
+            spinnerBtn.classList.add('spinned');
             spinnerBtn.querySelector('.spinner__btn').classList.add('spinned');
             spinnerBtn.querySelector('.spinner__btn').innerHTML = 'Get<br>Bonus'
             spinnerBtn.querySelector('.spinner__btn').setAttribute('href', `https://foggystarproject.com/${lang}/signup${queryString}`)

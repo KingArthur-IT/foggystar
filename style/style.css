@@ -524,6 +524,14 @@ body {
   transition: background .3s ease, color .2s ease;
 }
 
+.spinner__btn span.bonus {
+  display: none;
+}
+
+.spinner__btn span {
+  color: #B3385E;
+}
+
 .spinner__btn:visited {
   color: #B3385E;
 }
@@ -531,17 +539,31 @@ body {
 .spinner__btn:hover {
   background: url("../img/wheel/btn-hover.png") no-repeat;
   background-size: 100% 100%;
+}
+
+.spinner__btn:hover span {
   color: #fff;
 }
 
 .spinner__btn:active {
   background: url("../img/wheel/btn-active.png") no-repeat;
   background-size: 100% 100%;
+}
+
+.spinner__btn:active span {
   color: #fff;
 }
 
 .spinner__btn.spinned {
   font-size: 34px;
+}
+
+.spinner__btn.spinned span.spin {
+  display: none;
+}
+
+.spinner__btn.spinned span.bonus {
+  display: block;
 }
 
 #spinner.spinning .spinner__hero {

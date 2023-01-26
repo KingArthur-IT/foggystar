@@ -59,18 +59,28 @@
         text-transform: uppercase
         color: #B3385E
         transition: background .3s ease, color .2s ease
+        & span.bonus
+            display: none
+        & span
+            color: #B3385E
         &:visited
             color: #B3385E
         &:hover
             background: url('../img/wheel/btn-hover.png') no-repeat
             background-size: 100% 100%
-            color: #fff
+            & span
+                color: #fff
         &:active
             background: url('../img/wheel/btn-active.png') no-repeat
             background-size: 100% 100%
-            color: #fff
+            & span
+                color: #fff
         &.spinned
             font-size: 34px
+            & span.spin
+                display: none
+            & span.bonus
+                display: block
 
 #spinner.spinning .spinner__hero
     transform: rotate(2428deg) //268

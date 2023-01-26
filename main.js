@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             spinnerBtn.classList.add('spinned');
             spinnerBtn.querySelector('.spinner__btn').classList.add('spinned');
-            spinnerBtn.querySelector('.spinner__btn').innerHTML = 'Get<br>Bonus'
             spinnerBtn.querySelector('.spinner__btn').setAttribute('href', `https://foggystarproject.com/${lang}/signup${queryString}`)
             document.querySelectorAll('.heart').forEach((el, inx) => {
                 const angle = Math.PI * ( 90 * Math.random() - 45 ) / 180.0
